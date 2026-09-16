@@ -206,6 +206,10 @@ section[id],article[id]{scroll-margin-top:92px}
 .app-list li{position:relative;padding-left:28px;color:var(--ink-2);font-size:.96rem;line-height:1.55}
 .app-list li::before{content:"";position:absolute;left:0;top:.42em;width:13px;height:14px;background:var(--honey);
   clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.app-links{margin-top:26px}
+.btn-small{padding:11px 22px;font-size:.92rem;background:linear-gradient(135deg,var(--honey),var(--honey-deep));color:#2f3033;box-shadow:0 8px 20px rgba(242,177,52,.34)}
+.btn-small:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(242,177,52,.46)}
+.app-links + .app-meta{margin-top:18px}
 .app-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
 .app-meta span{padding:7px 14px;border-radius:10px;border:1px solid var(--line);font-size:.8rem;
   font-weight:600;color:var(--ink-2);background:var(--bg-2)}
