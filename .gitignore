@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# исходные картинки логотипа лежат в assets/ — дубликаты в корне не версионируем
+/NG Hive.jpg
+/NG_Hive_square.jpg
+/grok-image-*.jpg

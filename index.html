@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NG Hive — мобильные приложения, собранные по сотам</title>
+<meta name="description" content="NG Hive — молодая продуктовая студия мобильных приложений. Умный будильник для Apple Watch, список покупок с напоминанием у магазина и редактор коллажей.">
+<meta name="theme-color" content="#f2b134">
+<meta property="og:title" content="NG Hive — мобильные приложения, собранные по сотам">
+<meta property="og:description" content="Новая студия, полная идей. Три приложения уже в работе.">
+<meta property="og:image" content="assets/header.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,4 93,27 93,73 50,96 7,73 7,27' fill='%23f2b134'/%3E%3Ctext x='50' y='66' font-family='Arial,sans-serif' font-size='38' font-weight='bold' text-anchor='middle' fill='%23333'%3ENG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="scroll-progress"><span id="progressBar"></span></div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="#top" id="brandLogo" title="Ткни в соты пять раз :)">
+    <span class="brand-mark">
+      <svg viewBox="0 0 120 112" aria-hidden="true">
+        <g class="hx-outer" fill="none" stroke="currentColor" stroke-width="5">
+          <polygon points="42,6 64,19 64,45 42,58 20,45 20,19"/>
+          <polygon points="78,6 100,19 100,45 78,58 56,45 56,19" transform="translate(0,0)"/>
+          <polygon points="24,54 46,67 46,93 24,106 2,93 2,67"/>
+          <polygon points="96,54 118,67 118,93 96,106 74,93 74,67"/>
+        </g>
+        <polygon class="hx-core" points="60,30 82,43 82,69 60,82 38,69 38,43"/>
+        <text class="hx-text" x="60" y="64" text-anchor="middle">NG</text>
+      </svg>
+    </span>
+    <span class="brand-word">NG<span>HIVE</span></span>
+  </a>
+
+  <nav class="site-nav" id="siteNav">
+    <a href="#apps" data-en="Apps">Приложения</a>
+    <a href="#about" data-en="Studio">Студия</a>
+    <a href="#process" data-en="Process">Процесс</a>
+    <a href="#roadmap" data-en="Roadmap">Планы</a>
+    <a href="#faq" data-en="FAQ">Вопросы</a>
+  </nav>
+
+  <div class="header-tools">
+    <button class="icon-btn lang-btn" id="langToggle" type="button" title="Language">RU</button>
+    <button class="icon-btn" id="themeToggle" type="button" title="Тема" aria-label="Переключить тему">
+      <svg viewBox="0 0 24 24" class="ic-sun"><circle cx="12" cy="12" r="5"/><g stroke-linecap="round"><path d="M12 1.5v3M12 19.5v3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M1.5 12h3M19.5 12h3M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></g></svg>
+      <svg viewBox="0 0 24 24" class="ic-moon"><path d="M21 13a8.5 8.5 0 1 1-10-10 7 7 0 0 0 10 10z"/></svg>
+    </button>
+    <a class="btn btn-mini" href="#contact" data-en="Contact">Связаться</a>
+    <button class="burger" id="burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="hero">
+    <canvas id="hexCanvas" aria-hidden="true"></canvas>
+    <div class="hero-inner">
+      <p class="eyebrow reveal" data-en="New studio · founded 2026">Новая студия · основана в 2026</p>
+      <h1 class="reveal">
+        <span data-en="Small hive.">Маленький улей.</span><br>
+        <span class="accent-line" data-en="Big ideas.">Большие идеи.</span>
+      </h1>
+      <p class="hero-sub reveal" data-en="NG Hive is a young product studio. We build mobile apps that do one thing — and do it properly. No ad clutter, no accounts you never asked for, and no data leaving your phone without a reason.">
+        NG Hive — молодая продуктовая студия. Мы делаем мобильные приложения,
+        которые решают одну задачу — и решают её как следует. Без рекламного мусора,
+        без регистраций «просто так» и без данных, которые уезжают с телефона без причины.
+      </p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-primary" href="#apps" data-en="See our apps">Наши приложения</a>
+        <a class="btn btn-ghost" href="#about" data-en="Who we are">Кто мы</a>
+      </div>
+      <div class="hero-ticker reveal" aria-hidden="true">
+        <span>Apple Watch</span><i>·</i>
+        <span>iOS</span><i>·</i>
+        <span>Android</span><i>·</i>
+        <span>React Native</span><i>·</i>
+        <span>Swift</span><i>·</i>
+        <span data-en="Privacy first">Приватность по умолчанию</span>
+      </div>
+    </div>
+    <div class="hero-art reveal">
+      <img src="assets/logo.jpg" alt="Логотип NG Hive" id="heroLogo">
+      <div class="hero-art-glow"></div>
+    </div>
+    <a class="scroll-hint" href="#stats" aria-label="Вниз"><span></span></a>
+  </section>
+
+  <!-- ══════════ STATS ══════════ -->
+  <section class="stats" id="stats">
+    <div class="stat reveal"><b class="count" data-target="3">0</b><span data-en="apps in the works">приложения в работе</span></div>
+    <div class="stat reveal"><b class="count" data-target="2">0</b><span data-en="already in TestFlight">уже в TestFlight</span></div>
+    <div class="stat reveal"><b class="count" data-target="3">0</b><span data-en="platforms: iOS, watchOS, Android">платформы: iOS, watchOS, Android</span></div>
+    <div class="stat reveal"><b>∞</b><span data-en="ideas in the notebook">идей в блокноте</span></div>
+  </section>
+
+  <!-- ══════════ ABOUT ══════════ -->
+  <section class="section" id="about">
+    <div class="sec-head reveal">
+      <p class="eyebrow" data-en="The studio">Студия</p>
+      <h2 data-en="We only just started — and that is the whole point">Мы только начали — и в этом весь смысл</h2>
+      <p class="lead" data-en="NG Hive is a small independent studio. No legacy code, no five-stage approvals, no six-month roadmaps nobody believes in. An idea from the morning is running on a real phone by the evening — and if it feels wrong in the hand, we throw it away and try again tomorrow.">
+        NG Hive — маленькая независимая студия. Нет наследства из старого кода,
+        нет согласований в пять этапов и планов на полгода, в которые никто не верит.
+        Идея, придуманная утром, к вечеру уже крутится на живом телефоне — а если
+        в руке она ощущается неправильно, мы её выбрасываем и завтра пробуем заново.
+      </p>
+    </div>
+
+    <div class="value-grid">
+      <article class="value reveal">
+        <span class="hex-ic">🐝</span>
+        <h3 data-en="One app — one job">Одно приложение — одна задача</h3>
+        <p data-en="A collage app makes collages. An alarm wakes you up. We would rather ship a small thing that works than a big one with a settings screen nobody survives.">
+          Коллажер делает коллажи. Будильник будит. Нам приятнее выпустить маленькую
+          вещь, которая работает, чем большую, в настройках которой невозможно выжить.</p>
+      </article>
+      <article class="value reveal">
+        <span class="hex-ic">🔒</span>
+        <h3 data-en="Your data stays with you">Данные остаются у вас</h3>
+        <p data-en="Our apps have no servers and no sign-ups. Lists, photos and heart-rate readings live on the device and go nowhere else.">
+          У наших приложений нет серверов и регистраций. Списки, фото и данные пульса
+          лежат на устройстве и никуда не уезжают.</p>
+      </article>
+      <article class="value reveal">
+        <span class="hex-ic">📱</span>
+        <h3 data-en="Tested on real nights">Тестируем на себе</h3>
+        <p data-en="The alarm is checked against real sleep, the shopping reminder in a real parking lot. A simulator has never woken anyone up.">
+          Будильник проверяется настоящим сном, напоминание о покупках — настоящей
+          парковкой у магазина. Симулятор ещё никого не разбудил.</p>
+      </article>
+      <article class="value reveal">
+        <span class="hex-ic">⚡</span>
+        <h3 data-en="Short iterations">Короткие итерации</h3>
+        <p data-en="Build it, install it, live with it for a day, fix whatever annoyed us. Repeat. That loop is the entire method.">
+          Собрали, поставили, пожили день, починили то, что раздражало. И снова.
+          Вся методология — вот этот круг.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ══════════ APPS ══════════ -->
+  <section class="section apps" id="apps">
+    <div class="sec-head reveal">
+      <p class="eyebrow" data-en="Products">Продукты</p>
+      <h2 data-en="Three apps we are building right now">Три приложения, которые мы делаем прямо сейчас</h2>
+      <p class="lead" data-en="Two of them are already in the hands of testers, the third is being assembled as you read this.">
+        Два уже в руках у тестировщиков, третий собирается прямо сейчас.</p>
+    </div>
+
+    <article class="app reveal" id="whatchalarm">
+      <div class="app-text">
+        <span class="pill pill-live" data-en="In TestFlight">В TestFlight</span>
+        <h3>WhatchAlarm</h3>
+        <p class="app-tag" data-en="A smart alarm that lives on your Apple Watch">Умный будильник, который живёт прямо на Apple Watch</p>
+        <p data-en="Instead of tearing you out of deep sleep at an exact minute, WhatchAlarm follows your heart rate in a window before your deadline and picks the lightest moment to wake you. If that moment never comes, it rings at the deadline anyway — oversleeping is not an option.">
+          Вместо того чтобы вырывать вас из глубокого сна ровно в назначенную минуту,
+          WhatchAlarm следит за пульсом в окне перед крайним сроком и выбирает самый
+          лёгкий момент для подъёма. Если такой момент так и не наступил — будильник
+          всё равно сработает в срок. Проспать невозможно.</p>
+        <ul class="app-list">
+          <li data-en="The whole engine runs natively on the watch — the iPhone can stay in another room">Весь движок работает на самих часах — iPhone может лежать в другой комнате</li>
+          <li data-en="Wakes you with gentle haptic taps, not a siren">Будит мягкими тактильными касаниями, а не сиреной</li>
+          <li data-en="A window of up to 30 minutes before your hard deadline">Окно до 30 минут перед жёстким временем подъёма</li>
+          <li data-en="Heart rate comes from HealthKit and is never uploaded anywhere">Пульс берётся из HealthKit и никуда не отправляется</li>
+        </ul>
+        <div class="app-meta">
+          <span>Apple Watch · watchOS 10+</span>
+          <span>Swift · SwiftUI · HealthKit</span>
+        </div>
+      </div>
+      <div class="app-art" data-tilt>
+        <div class="watch">
+          <div class="watch-screen">
+            <p class="w-small" data-en="Alarm set">Будильник включён</p>
+            <p class="w-time">06:40</p>
+            <p class="w-small" data-en="window 30 min">окно 30 мин</p>
+            <div class="w-pulse"><svg viewBox="0 0 120 40" preserveAspectRatio="none"><polyline points="0,20 15,20 22,8 30,32 38,20 55,20 62,12 70,28 78,20 120,20"/></svg></div>
+          </div>
+          <span class="watch-crown"></span>
+        </div>
+      </div>
+    </article>
+
+    <article class="app app-rev reveal" id="shopping">
+      <div class="app-text">
+        <span class="pill pill-live" data-en="In TestFlight">В TestFlight</span>
+        <h3>ShopPing</h3>
+        <p class="app-tag" data-en="A shopping list that pings you when you are next to the store">Список покупок, который сам напомнит о себе у магазина</p>
+        <p data-en="Every store you actually shop at gets its own list — a big chain or the little place around the corner you pinned on the map yourself. The moment your phone notices you are nearby and the list is not empty, it quietly reminds you. No account, no server, no subscription.">
+          Для каждого магазина, в который вы реально ходите, — свой список: хоть
+          крупная сеть, хоть маленькая лавка за углом, которую вы сами отметили
+          точкой на карте. Как только телефон замечает, что вы рядом, а список
+          не пуст, он тихо напоминает. Без регистрации, без сервера, без подписки.</p>
+        <ul class="app-list">
+          <li data-en="Geofenced reminders that keep working even when the app is closed">Напоминания по геозонам работают, даже когда приложение закрыто</li>
+          <li data-en="Add your own stores by dropping a pin on the map">Свои магазины добавляются точкой на карте</li>
+          <li data-en="A photo and a product link for every item, drag to reorder">Фото и ссылка на товар у каждой позиции, порядок меняется перетаскиванием</li>
+          <li data-en="Its own font size control — readable without glasses">Свой размер шрифта — читается и без очков</li>
+        </ul>
+        <div class="app-meta">
+          <span>iOS · Android</span>
+          <span data-en="14 days free, then a one-time purchase">14 дней бесплатно, потом разовая покупка</span>
+        </div>
+      </div>
+      <div class="app-art" data-tilt>
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="ph-head"><b>Costco</b><span class="ph-dot"></span></div>
+            <div class="ph-row"><i></i><span data-en="Milk, 2 %">Молоко 2 %</span></div>
+            <div class="ph-row"><i></i><span data-en="Coffee beans">Кофе в зёрнах</span></div>
+            <div class="ph-row done"><i>✓</i><span data-en="Paper towels">Бумажные полотенца</span></div>
+            <div class="ph-row"><i></i><span data-en="AA batteries">Батарейки AA</span></div>
+            <div class="ph-toast"><b data-en="You are near Costco">Вы рядом с Costco</b><span data-en="4 items on the list">4 позиции в списке</span></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="app reveal" id="hcollage">
+      <div class="app-text">
+        <span class="pill pill-wip" data-en="In development">В разработке</span>
+        <h3>H.Collage</h3>
+        <p class="app-tag" data-en="A collage of 2 to 10 photos, without the fuss">Коллаж из 2–10 фото — без возни</p>
+        <p data-en="Say how many photos the collage should have, pick them, and choose a grid from real previews instead of blindly cycling through layouts. Every photo can be dragged and pinched inside its own cell until it sits exactly right. Then save it to Photos or share it straight away.">
+          Скажите, сколько фото должно быть в коллаже, выберите их — и берите сетку
+          из настоящих превью, а не вслепую перелистывая раскладки. Каждое фото
+          двигается пальцем и масштабируется щипком прямо внутри своей ячейки,
+          пока не встанет как надо. Потом — сохранить в «Фото» или сразу поделиться.</p>
+        <ul class="app-list">
+          <li data-en="Up to four grid variants for every photo count">До четырёх вариантов сетки под каждое количество фото</li>
+          <li data-en="Pan and zoom inside a cell, long-press to swap a photo">Двигаем и масштабируем внутри ячейки, долгое нажатие — заменить фото</li>
+          <li data-en="An adjustable frame between the photos">Настраиваемая рамка между снимками</li>
+          <li data-en="Save to Photos or share in a single tap">Сохранение в «Фото» и «Поделиться» в одно касание</li>
+        </ul>
+        <div class="app-meta">
+          <span>iOS · Android</span>
+          <span>React Native · Expo</span>
+        </div>
+      </div>
+      <div class="app-art" data-tilt>
+        <div class="phone">
+          <div class="phone-screen collage-screen">
+            <div class="cg" id="collageDemo">
+              <div class="cg-cell"></div><div class="cg-cell"></div><div class="cg-cell"></div>
+              <div class="cg-cell"></div><div class="cg-cell"></div>
+            </div>
+            <button class="cg-btn" type="button" id="collageShuffle" data-en="Another layout">Другая раскладка</button>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ══════════ PROCESS ══════════ -->
+  <section class="section process" id="process">
+    <div class="sec-head reveal">
+      <p class="eyebrow" data-en="How we work">Как мы работаем</p>
+      <h2 data-en="From a note on a napkin to the App Store">От заметки на салфетке до App Store</h2>
+    </div>
+    <ol class="timeline">
+      <li class="reveal"><b>01</b><h3 data-en="The annoyance">Раздражение</h3><p data-en="Every app starts with something that genuinely annoyed us in ordinary life.">Каждое приложение начинается с того, что нас по-настоящему раздражало в обычной жизни.</p></li>
+      <li class="reveal"><b>02</b><h3 data-en="The smallest version">Минимальная версия</h3><p data-en="We build the smallest thing that can prove the idea. Usually days, not months.">Собираем самое маленькое, что может доказать идею. Обычно это дни, а не месяцы.</p></li>
+      <li class="reveal"><b>03</b><h3 data-en="Real devices">Живые устройства</h3><p data-en="It goes onto a real phone and a real watch immediately. A simulator has never woken anyone up.">Оно сразу попадает на настоящий телефон и настоящие часы. Симулятор ещё никого не разбудил.</p></li>
+      <li class="reveal"><b>04</b><h3>TestFlight</h3><p data-en="Testers live with it for a week, we listen to the complaints and fix exactly those.">Тестировщики живут с ним неделю, мы слушаем жалобы и чиним ровно их.</p></li>
+      <li class="reveal"><b>05</b><h3 data-en="Release — and onwards">Релиз — и дальше</h3><p data-en="A release is not the finish line. Updates keep coming while people keep using it.">Релиз — не финиш. Обновления идут, пока приложением пользуются.</p></li>
+    </ol>
+  </section>
+
+  <!-- ══════════ ROADMAP ══════════ -->
+  <section class="section" id="roadmap">
+    <div class="sec-head reveal">
+      <p class="eyebrow" data-en="What is next">Что дальше</p>
+      <h2 data-en="The hive keeps filling up">Улей продолжает заполняться</h2>
+      <p class="lead" data-en="Four cells in our logo are still empty. That is not a coincidence — here is roughly what is going into them.">
+        В нашем логотипе четыре соты пока пустые. Это не случайность — вот примерно
+        то, чем они наполняются.</p>
+    </div>
+    <div class="road-grid">
+      <div class="road reveal"><span data-en="Now">Сейчас</span><h3 data-en="H.Collage to TestFlight">H.Collage в TestFlight</h3><p data-en="Finishing the editor and handing the first build to testers.">Доводим редактор и отдаём первую сборку тестировщикам.</p></div>
+      <div class="road reveal"><span data-en="Soon">Скоро</span><h3 data-en="WhatchAlarm on the App Store">WhatchAlarm в App Store</h3><p data-en="A public release once the work on critical alerts is finished.">Публичный релиз, как только будет закончена работа с критическими уведомлениями.</p></div>
+      <div class="road reveal"><span data-en="Later">Позже</span><h3 data-en="Android for ShopPing">Android для ShopPing</h3><p data-en="The iOS version is already alive; the Android build is next in line.">Версия для iOS уже живёт, сборка под Android — следующая в очереди.</p></div>
+      <div class="road reveal road-empty"><span data-en="Empty cell">Пустая сота</span><h3 data-en="Your idea?">Ваша идея?</h3><p data-en="There is room for one more. Tell us what annoys you every single day.">У нас есть место ещё для одной. Расскажите, что раздражает вас каждый день.</p></div>
+    </div>
+  </section>
+
+  <!-- ══════════ FAQ ══════════ -->
+  <section class="section" id="faq">
+    <div class="sec-head reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2 data-en="Short answers">Короткие ответы</h2>
+    </div>
+    <div class="faq-list">
+      <details class="reveal"><summary data-en="Who is behind NG Hive?">Кто стоит за NG Hive?</summary>
+        <p data-en="An independent development studio registered in the United States. The team is small and contact is direct — you write to us, and we answer ourselves, not a support bot.">Независимая студия разработки, зарегистрированная в США. Команда маленькая, связь прямая — вы пишете нам, отвечаем мы сами, а не бот поддержки.</p></details>
+      <details class="reveal"><summary data-en="Where can I download the apps?">Где скачать приложения?</summary>
+        <p data-en="ShopPing and WhatchAlarm are distributed through TestFlight right now, and H.Collage will join them shortly. Write to us and we will send an invite.">ShopPing и WhatchAlarm сейчас раздаются через TestFlight, H.Collage присоединится к ним в ближайшее время. Напишите нам — пришлём приглашение.</p></details>
+      <details class="reveal"><summary data-en="Do the apps collect my data?">Приложения собирают мои данные?</summary>
+        <p data-en="No. There is no backend at all: lists, photos and health readings never leave the device. Store search and maps use public services without any personal identifiers.">Нет. Бэкенда просто не существует: списки, фото и показатели здоровья не покидают устройство. Поиск магазинов и карты используют публичные сервисы без каких-либо персональных идентификаторов.</p></details>
+      <details class="reveal"><summary data-en="Do you take custom projects?">Делаете ли вы приложения на заказ?</summary>
+        <p data-en="Sometimes — if the idea fits the hive. Send us a couple of sentences about what you need.">Иногда — если идея подходит улью. Напишите пару предложений о том, что вам нужно.</p></details>
+      <details class="reveal"><summary data-en="Why a hive?">Почему улей?</summary>
+        <p data-en="Because a hive is many small, identical, honest cells that together hold something valuable. That is exactly how we would like our apps to be built.">Потому что улей — это множество маленьких, одинаковых, честных ячеек, которые вместе держат что-то ценное. Именно так мы хотим собирать свои приложения.</p></details>
+    </div>
+  </section>
+
+  <!-- ══════════ CONTACT ══════════ -->
+  <section class="section contact" id="contact">
+    <div class="contact-card reveal">
+      <div class="contact-left">
+        <p class="eyebrow" data-en="Contact">Связаться</p>
+        <h2 data-en="Got an idea, a bug or a question?">Есть идея, баг или вопрос?</h2>
+        <p data-en="Write to us — every message is read by a real human. If you want to join the testers, just say which app.">
+          Напишите нам — каждое сообщение читает живой человек. Хотите в тестировщики —
+          просто укажите, какое приложение.</p>
+        <button class="mail-copy" id="mailCopy" type="button" data-mail="dona.ios18@gmail.com">
+          <span>dona.ios18@gmail.com</span>
+          <em data-en="copy">копировать</em>
+        </button>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <label><span data-en="Your name">Ваше имя</span><input type="text" name="name" required autocomplete="name"></label>
+        <label><span data-en="Your email">Ваш e-mail</span><input type="email" name="email" required autocomplete="email"></label>
+        <label><span data-en="Message">Сообщение</span><textarea name="msg" rows="4" required></textarea></label>
+        <button class="btn btn-primary" type="submit" data-en="Send">Отправить</button>
+        <p class="form-note" data-en="The button opens your mail app with the message ready to go.">Кнопка откроет ваш почтовый клиент с готовым письмом.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="foot-top">
+    <div class="foot-brand">
+      <img src="assets/logo.jpg" alt="NG Hive">
+      <p data-en="Mobile apps, assembled cell by cell.">Мобильные приложения, собранные по сотам.</p>
+    </div>
+    <nav class="foot-nav">
+      <a href="#apps" data-en="Apps">Приложения</a>
+      <a href="#about" data-en="Studio">Студия</a>
+      <a href="#roadmap" data-en="Roadmap">Планы</a>
+      <a href="#contact" data-en="Contact">Связаться</a>
+    </nav>
+  </div>
+  <div class="foot-bot">
+    <span>© <span id="year">2026</span> NG Hive</span>
+    <span data-en="Made in a small hive, on a large amount of coffee.">Сделано в маленьком улье и на большом количестве кофе.</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Наверх">↑</button>
+<div class="bee" id="bee" aria-hidden="true">🐝</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
