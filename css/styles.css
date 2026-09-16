@@ -161,7 +161,7 @@ html[data-theme="dark"] .hero-art img{mix-blend-mode:normal;background:#fff;box-
   width:24px;height:38px;border:2px solid var(--steel);border-radius:14px;opacity:.6}
 .scroll-hint span{position:absolute;left:50%;top:8px;width:4px;height:7px;border-radius:2px;
   background:var(--honey);transform:translateX(-50%);animation:wheel 1.8s infinite}
-@keyframes wheel{0%{opacity:0;transform:translate(-50%,0)}30%{opacity:1}100%{opacity:0;transform:translate(-50%,14px)}}
+@keyframes wheel{0%,100%{opacity:1;transform:translate(-50%,0)}50%{opacity:.5;transform:translate(-50%,13px)}}
 
 /* ─────────── цифры ─────────── */
 .stats{position:relative;z-index:2;max-width:var(--max);margin:0 auto;padding:0 clamp(16px,4vw,32px);
@@ -359,6 +359,7 @@ html[data-theme="dark"] .foot-brand img{mix-blend-mode:normal;background:#fff}
 
 /* ─────────── адаптив ─────────── */
 @media (max-width:980px){
+  .scroll-hint{display:none}
   .hero{grid-template-columns:1fr;text-align:left}
   .hero-art{order:-1}
   .hero-art img{width:min(74%,300px)}
