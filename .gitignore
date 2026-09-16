@@ -7,3 +7,6 @@ Thumbs.db
 /NG Hive.jpg
 /NG_Hive_square.jpg
 /grok-image-*.jpg
+
+# картинки для соцсетей — не для сайта
+/posts/*.png
