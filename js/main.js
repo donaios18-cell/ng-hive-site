@@ -202,21 +202,13 @@
     toast(lang === 'en' ? 'Opening your mail app…' : 'Открываем почтовый клиент…');
   });
 
-  /* ─────────── пасхалка: пять кликов по логотипу ─────────── */
-  var clicks = 0, clickTimer = null;
+  /* ─────────── пасхалка: клик по логотипу выпускает пчелу ─────────── */
   var bee = $('#bee');
-  $('#brandLogo').addEventListener('click', function (e) {
-    clicks++;
-    clearTimeout(clickTimer);
-    clickTimer = setTimeout(function () { clicks = 0; }, 1400);
-    if (clicks >= 5) {
-      e.preventDefault();
-      clicks = 0;
-      bee.classList.remove('fly');
-      void bee.offsetWidth;
-      bee.classList.add('fly');
-      toast(lang === 'en' ? 'Bzzz. You found the bee.' : 'Жжж. Вы нашли пчелу.');
-    }
+  $('#brandLogo').addEventListener('click', function () {
+    bee.classList.remove('fly');
+    void bee.offsetWidth;          // перезапускаем анимацию с нуля
+    bee.classList.add('fly');
+    toast(lang === 'en' ? 'Bzzz. There goes the bee.' : 'Жжж. Полетела.');
   });
 
   /* ─────────── фон героя: живые соты ─────────── */
