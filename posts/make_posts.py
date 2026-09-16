@@ -150,9 +150,9 @@ def watch(img, cx, cy):
     ds = ImageDraw.Draw(scr)
     ds.rounded_rectangle([0, 0, scr.width - 1, scr.height - 1], radius=r - 20, fill=(15, 17, 20, 255))
     m = scr.width // 2
-    text(ds, (m, 70), "Будильник", font(F_SEMI, 25), (150, 157, 167, 255), anchor="mm")
+    text(ds, (m, 70), "Alarm", font(F_SEMI, 25), (150, 157, 167, 255), anchor="mm")
     text(ds, (m, 148), "06:40", font(F_BOLD, 92), HONEY + (255,), anchor="mm")
-    text(ds, (m, 214), "окно 30 мин", font(F_REG, 24), (130, 137, 147, 255), anchor="mm")
+    text(ds, (m, 214), "30 min window", font(F_REG, 24), (130, 137, 147, 255), anchor="mm")
     pts = [(28, 268), (70, 268), (86, 236), (104, 296), (122, 268), (166, 268),
            (182, 244), (198, 288), (214, 268), (scr.width - 28, 268)]
     ds.line(pts, fill=HONEY + (255,), width=7, joint="curve")
@@ -177,8 +177,8 @@ def phone_shopping(img, cx, cy):
     text(d, (28, 74), "Costco", font(F_BOLD, 36), INK + (255,))
     d.polygon(hexagon(sw - 44, 92, 14), fill=HONEY + (255,))
 
-    rows = [("Молоко 2 %", False), ("Кофе в зёрнах", False),
-            ("Полотенца", True), ("Батарейки AA", False)]
+    rows = [("Milk 2%", False), ("Coffee beans", False),
+            ("Paper towels", True), ("AA batteries", False)]
     f_row = font(F_SEMI, 25)
     y = 140
     for label, done in rows:
@@ -199,8 +199,8 @@ def phone_shopping(img, cx, cy):
     toast = [22, sh - 132, sw - 22, sh - 32]
     d.rounded_rectangle([toast[0], toast[1] + 6, toast[2], toast[3]], radius=22, fill=HONEY_DEEP + (255,))
     d.rounded_rectangle([toast[0], toast[1], toast[2], toast[3] - 6], radius=22, fill=HONEY + (255,))
-    text(d, (44, sh - 98), "Вы рядом с Costco", font(F_BOLD, 26), INK + (255,), anchor="lm")
-    text(d, (44, sh - 64), "4 позиции в списке", font(F_REG, 22), (96, 80, 44, 255), anchor="lm")
+    text(d, (44, sh - 98), "You're near Costco", font(F_BOLD, 26), INK + (255,), anchor="lm")
+    text(d, (44, sh - 64), "4 items on your list", font(F_REG, 22), (96, 80, 44, 255), anchor="lm")
 
     mask = Image.new("L", (sw, sh), 0)
     ImageDraw.Draw(mask).rounded_rectangle([0, 0, sw - 1, sh - 1], radius=44, fill=255)
@@ -238,7 +238,7 @@ def phone_collage(img, cx, cy):
         scr.paste(tile, (int(x), int(y)), m)
 
     d.rounded_rectangle([pad, sh - 98, sw - pad, sh - 36], radius=22, fill=HONEY + (255,))
-    text(d, (sw / 2, sh - 67), "Сохранить", font(F_BOLD, 27), INK + (255,), anchor="mm")
+    text(d, (sw / 2, sh - 67), "Save", font(F_BOLD, 27), INK + (255,), anchor="mm")
 
     mask = Image.new("L", (sw, sh), 0)
     ImageDraw.Draw(mask).rounded_rectangle([0, 0, sw - 1, sh - 1], radius=44, fill=255)
@@ -291,9 +291,9 @@ def compose(name, tagline, device, dark=False, accent_note=None):
     text(d, (SIZE / 2, 900), tagline, font(F_REG, 37), sub_col, anchor="mm")
     if accent_note:
         text(d, (SIZE / 2, 947), accent_note, font(F_SEMI, 29), HONEY + (255,), anchor="mm")
-        pill(d, SIZE / 2, 985, "Уже в App Store", font(F_SEMI, 28), pill_bg, pill_fg, pad=(40, 18))
+        pill(d, SIZE / 2, 985, "Now on the App Store", font(F_SEMI, 28), pill_bg, pill_fg, pad=(40, 18))
     else:
-        pill(d, SIZE / 2, 955, "Уже в App Store", font(F_SEMI, 30), pill_bg, pill_fg, pad=(44, 22))
+        pill(d, SIZE / 2, 955, "Now on the App Store", font(F_SEMI, 30), pill_bg, pill_fg, pad=(44, 22))
 
     out = os.path.join(HERE, "%s.png" % name.lower().replace(".", "").replace(" ", "-"))
     img.convert("RGB").save(out, quality=95)
@@ -301,7 +301,7 @@ def compose(name, tagline, device, dark=False, accent_note=None):
 
 
 if __name__ == "__main__":
-    compose("WhatchAlarm", "Будит в лёгкой фазе сна, а не по будильнику", watch, dark=True)
-    compose("ShopPing", "Напомнит о списке покупок у самого магазина", phone_shopping)
-    compose("H.Collage", "Коллаж из 2–10 фото за минуту",
-            phone_collage, accent_note="…и второй слой, о котором знаете только вы")
+    compose("WhatchAlarm", "Wakes you at the lightest moment of sleep", watch, dark=True)
+    compose("ShopPing", "Your list reminds you right at the store", phone_shopping)
+    compose("H.Collage", "A collage of 2–10 photos in a minute",
+            phone_collage, accent_note="…and a second layer only you know about")
