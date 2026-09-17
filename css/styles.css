@@ -112,6 +112,22 @@ html[data-theme="dark"] body::before{opacity:.25}
 }
 .icon-btn:hover{border-color:var(--honey);color:var(--honey-deep);transform:translateY(-2px)}
 .icon-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.9}
+.lang-menu{position:relative}
+.lang-btn{width:auto;min-width:38px;padding:0 10px;letter-spacing:.04em}
+.lang-list{position:absolute;right:0;top:calc(100% + 10px);z-index:130;list-style:none;margin:0;padding:6px;min-width:176px;
+  background:var(--card-solid);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lg);
+  opacity:0;visibility:hidden;transform:translateY(-6px) scale(.98);transform-origin:top right;transition:.2s}
+.lang-menu.open .lang-list{opacity:1;visibility:visible;transform:none}
+.lang-list button{width:100%;display:flex;align-items:center;gap:10px;
+  padding:10px 12px;border:0;border-radius:11px;background:transparent;color:var(--ink);cursor:pointer;
+  font-weight:600;font-size:.92rem;text-align:left}
+.lang-list button span{flex:1}
+.lang-list button em{font-style:normal;font-size:.72rem;font-weight:700;color:var(--steel);letter-spacing:.06em}
+.lang-list button:hover,.lang-list button:focus-visible{background:var(--honey-soft);outline:none}
+.lang-list button[aria-checked="true"],.lang-list button[aria-checked="true"] em{color:var(--honey-deep)}
+.lang-list button::before{content:"";width:9px;height:10px;flex:none;background:transparent;
+  clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.lang-list button[aria-checked="true"]::before{background:var(--honey)}
 .ic-moon{display:none}
 html[data-theme="dark"] .ic-sun{display:none}
 html[data-theme="dark"] .ic-moon{display:block}

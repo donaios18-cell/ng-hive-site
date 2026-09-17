@@ -26,25 +26,104 @@
     try { localStorage.setItem('nghive-theme', next); } catch (e) {}
   });
 
-  /* ─────────── язык: RU ⇄ EN ─────────── */
+  /* ─────────── языки ─────────── */
+  // Русский — прямо в разметке, английский — в data-en, остальные — в js/i18n.js
+  var LANGS = window.NGHIVE_LANGS || [['ru', 'Русский'], ['en', 'English']];
+  var DICT = window.NGHIVE_I18N || {};
+  var UI = window.NGHIVE_UI || {};
+  var CODES = LANGS.map(function (l) { return l[0]; });
+
+  var langMenu = $('#langMenu');
   var langBtn = $('#langToggle');
-  var lang = 'ru';
-  try { lang = localStorage.getItem('nghive-lang') || 'ru'; } catch (e) {}
+  var langList = $('#langList');
+
+  // Сохранённый выбор → язык браузера → английский
+  function detectLang() {
+    var saved = null;
+    try { saved = localStorage.getItem('nghive-lang'); } catch (e) {}
+    if (saved && CODES.indexOf(saved) !== -1) return saved;
+    var prefs = navigator.languages || [navigator.language || ''];
+    for (var i = 0; i < prefs.length; i++) {
+      var code = String(prefs[i]).slice(0, 2).toLowerCase();
+      if (CODES.indexOf(code) !== -1) return code;
+    }
+    return 'en';
+  }
+  var lang = detectLang();
+
+  function ui(key) {
+    return (UI[lang] && UI[lang][key]) || (UI.en && UI.en[key]) || key;
+  }
 
   var translatable = $$('[data-en]');
   translatable.forEach(function (el) { el.setAttribute('data-ru', el.innerHTML.trim()); });
 
+  LANGS.forEach(function (l) {
+    var li = document.createElement('li');
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('role', 'menuitemradio');
+    b.setAttribute('data-lang', l[0]);
+    b.innerHTML = '<span>' + l[1] + '</span><em>' + l[0].toUpperCase() + '</em>';
+    b.addEventListener('click', function () {
+      applyLang(l[0]);
+      closeLangMenu();
+      langBtn.focus();
+    });
+    li.appendChild(b);
+    langList.appendChild(li);
+  });
+
   function applyLang(next) {
     lang = next;
     translatable.forEach(function (el) {
-      el.innerHTML = next === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-ru');
+      var en = el.getAttribute('data-en');
+      el.innerHTML = next === 'ru' ? el.getAttribute('data-ru')
+                   : next === 'en' ? en
+                   : (DICT[next] && DICT[next][en]) || en;
     });
     root.setAttribute('lang', next);
-    langBtn.textContent = next === 'en' ? 'EN' : 'RU';
+    document.title = ui('title');
+    langBtn.textContent = next.toUpperCase();
+    langBtn.title = ui('lang');
+    $('#brandLogo').title = ui('logo.tip');
+    $('#themeToggle').title = ui('theme');
+    $('#themeToggle').setAttribute('aria-label', ui('theme'));
+    $('#burger').setAttribute('aria-label', ui('menu'));
+    $('#toTop').setAttribute('aria-label', ui('top'));
+    $$('#langList button').forEach(function (b) {
+      b.setAttribute('aria-checked', b.getAttribute('data-lang') === next ? 'true' : 'false');
+    });
     try { localStorage.setItem('nghive-lang', next); } catch (e) {}
   }
+
+  function openLangMenu() {
+    langMenu.classList.add('open');
+    langBtn.setAttribute('aria-expanded', 'true');
+    var current = langList.querySelector('[aria-checked="true"]');
+    if (current) current.focus();
+  }
+  function closeLangMenu() {
+    langMenu.classList.remove('open');
+    langBtn.setAttribute('aria-expanded', 'false');
+  }
+  langBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    if (langMenu.classList.contains('open')) closeLangMenu(); else openLangMenu();
+  });
+  document.addEventListener('click', function (e) {
+    if (!langMenu.contains(e.target)) closeLangMenu();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (!langMenu.classList.contains('open')) return;
+    var items = $$('#langList button');
+    var idx = items.indexOf(document.activeElement);
+    if (e.key === 'Escape') { closeLangMenu(); langBtn.focus(); }
+    else if (e.key === 'ArrowDown') { e.preventDefault(); items[(idx + 1) % items.length].focus(); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); items[(idx - 1 + items.length) % items.length].focus(); }
+  });
+
   applyLang(lang);
-  langBtn.addEventListener('click', function () { applyLang(lang === 'ru' ? 'en' : 'ru'); });
 
   /* ─────────── меню и «прилипшая» шапка ─────────── */
   var header = $('#siteHeader');
@@ -183,7 +262,7 @@
   var mailBtn = $('#mailCopy');
   mailBtn.addEventListener('click', function () {
     var mail = mailBtn.getAttribute('data-mail');
-    var done = function () { toast(lang === 'en' ? 'Email copied' : 'Адрес скопирован'); };
+    var done = function () { toast(ui('toast.copied')); };
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(mail).then(done, function () { window.location.href = 'mailto:' + mail; });
     } else {
@@ -199,7 +278,7 @@
     var subject = encodeURIComponent('NG Hive — ' + (els.name.value || 'сообщение с сайта'));
     var body = encodeURIComponent(els.msg.value + '\n\n— ' + els.name.value + '\n' + els.email.value);
     window.location.href = 'mailto:' + mailBtn.getAttribute('data-mail') + '?subject=' + subject + '&body=' + body;
-    toast(lang === 'en' ? 'Opening your mail app…' : 'Открываем почтовый клиент…');
+    toast(ui('toast.mail'));
   });
 
   /* ─────────── пасхалка: клик по логотипу выпускает пчелу ─────────── */
@@ -208,7 +287,7 @@
     bee.classList.remove('fly');
     void bee.offsetWidth;          // перезапускаем анимацию с нуля
     bee.classList.add('fly');
-    toast(lang === 'en' ? 'Bzzz. There goes the bee.' : 'Жжж. Полетела.');
+    toast(ui('toast.bee'));
   });
 
   /* ─────────── фон героя: живые соты ─────────── */
