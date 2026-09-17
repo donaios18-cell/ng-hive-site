@@ -52,10 +52,30 @@ python -m http.server 8777
 
 и зайти на `http://localhost:8777`.
 
-## Публикация на GitHub Pages
+## Где живёт сайт
 
-Settings → Pages → Source: `Deploy from a branch`, ветка `master`, папка `/ (root)`.
-Через минуту сайт будет по адресу `https://<аккаунт>.github.io/<репозиторий>/`.
+Сайт опубликован в Cloudflare Pages, проект `nghive`, адрес — https://nghive.app
+(и `www.nghive.app`). Рядом на том же домене живут сайты приложений:
+`shopping.nghive.app`, `watch.nghive.app`, `collage.nghive.app`.
+
+Старый адрес на GitHub Pages остался живым: в репозитории есть ветка `redirect`,
+из которой GitHub раздаёт страницу-перенаправление на новый адрес. Эту ветку
+трогать не нужно — она не имеет отношения к самому сайту.
+
+## Как выложить изменения
+
+Cloudflare берёт файлы не из GitHub, а из папки, которую ему отдают. Поэтому
+после правок нужны два действия: обычный `git push` — чтобы код сохранился, и
+выкладка — чтобы обновился сайт:
+
+```bash
+npx wrangler pages deploy . --project-name=nghive --branch=master
+```
+
+Команде нужны переменные `CLOUDFLARE_API_TOKEN` и `CLOUDFLARE_ACCOUNT_ID`
+(ключ лежит у Натальи, в репозиторий его класть нельзя). Выкладывать стоит
+только `index.html`, `css/`, `js/` и `assets/` — папка `posts/` к сайту
+отношения не имеет.
 
 ## Правки, которые делаются чаще всего
 
