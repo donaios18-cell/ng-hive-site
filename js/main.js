@@ -37,17 +37,11 @@
   var langBtn = $('#langToggle');
   var langList = $('#langList');
 
-  // Сохранённый выбор → язык браузера → английский
+  // Сохранённый выбор посетителя, иначе английский
   function detectLang() {
     var saved = null;
     try { saved = localStorage.getItem('nghive-lang'); } catch (e) {}
-    if (saved && CODES.indexOf(saved) !== -1) return saved;
-    var prefs = navigator.languages || [navigator.language || ''];
-    for (var i = 0; i < prefs.length; i++) {
-      var code = String(prefs[i]).slice(0, 2).toLowerCase();
-      if (CODES.indexOf(code) !== -1) return code;
-    }
-    return 'en';
+    return saved && CODES.indexOf(saved) !== -1 ? saved : 'en';
   }
   var lang = detectLang();
 
@@ -56,7 +50,6 @@
   }
 
   var translatable = $$('[data-en]');
-  translatable.forEach(function (el) { el.setAttribute('data-ru', el.innerHTML.trim()); });
 
   LANGS.forEach(function (l) {
     var li = document.createElement('li');
@@ -275,7 +268,7 @@
     e.preventDefault();
     var f = e.target;
     var els = f.elements;
-    var subject = encodeURIComponent('NG Hive — ' + (els.name.value || 'сообщение с сайта'));
+    var subject = encodeURIComponent('NG Hive — ' + (els.name.value || 'website message'));
     var body = encodeURIComponent(els.msg.value + '\n\n— ' + els.name.value + '\n' + els.email.value);
     window.location.href = 'mailto:' + mailBtn.getAttribute('data-mail') + '?subject=' + subject + '&body=' + body;
     toast(ui('toast.mail'));
