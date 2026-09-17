@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nghive.app/sitemap.xml
