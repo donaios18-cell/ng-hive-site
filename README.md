@@ -64,18 +64,21 @@ python -m http.server 8777
 
 ## Как выложить изменения
 
-Cloudflare берёт файлы не из GitHub, а из папки, которую ему отдают. Поэтому
-после правок нужны два действия: обычный `git push` — чтобы код сохранился, и
-выкладка — чтобы обновился сайт:
+Cloudflare берёт файлы не из GitHub, а из того, что ему отдают. Поэтому после
+правок сначала `git push`, потом выкладка:
 
 ```bash
-npx wrangler pages deploy . --project-name=nghive --branch=master
+python tools/deploy_sites.py nghive        # этот сайт
+python tools/deploy_sites.py all           # все четыре сайта студии
+python tools/deploy_sites.py watch --dry-run   # посмотреть, что уедет
 ```
 
-Команде нужны переменные `CLOUDFLARE_API_TOKEN` и `CLOUDFLARE_ACCOUNT_ID`
-(ключ лежит у Натальи, в репозиторий его класть нельзя). Выкладывать стоит
-только `index.html`, `css/`, `js/` и `assets/` — папка `posts/` к сайту
-отношения не имеет.
+Скрипт всегда берёт свежий коммит из GitHub, а не рабочую папку — сайты
+правят несколько сессий, и выкладка из устаревшей копии откатила бы чужие
+правки. Незакоммиченное на сайт не попадает.
+
+Ключ Cloudflare в репозитории не хранится: скрипт ищет путь к файлу с ключом в
+переменной `NGHIVE_CF_TOKEN_FILE` или в `tools/cf-token-path.txt` (в .gitignore).
 
 ## Правки, которые делаются чаще всего
 

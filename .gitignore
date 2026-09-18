@@ -14,3 +14,6 @@ Thumbs.db
 
 # ключи доступа рядом с сайтом не держим
 *token*.txt
+
+# локальный путь к ключу Cloudflare для tools/deploy_sites.py
+/tools/cf-token-path.txt
