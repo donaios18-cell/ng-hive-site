@@ -17,3 +17,4 @@ Thumbs.db
 
 # локальный путь к ключу Cloudflare для tools/deploy_sites.py
 /tools/cf-token-path.txt
+/.wrangler/
