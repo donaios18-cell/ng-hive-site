@@ -188,7 +188,9 @@ window.NGHIVE_I18N = {
     "Send": "Senden",
     "The button opens your mail app with the message ready to go.": "Der Button öffnet dein Mailprogramm mit einer fertigen Nachricht.",
     "Mobile apps, assembled cell by cell.": "Mobile Apps, Wabe für Wabe gebaut.",
-    "Made in a small hive, on a large amount of coffee.": "Gemacht in einem kleinen Bienenstock, mit sehr viel Kaffee."
+    "Made in a small hive, on a large amount of coffee.": "Gemacht in einem kleinen Bienenstock, mit sehr viel Kaffee.",
+    "Send a list by link — whoever opens it gets the items, no account needed": "Liste per Link teilen — wer sie öffnet, übernimmt die Einträge, ganz ohne Konto",
+    "Ready-made store lists for six countries, picked by where you actually are": "Fertige Ladenlisten für sechs Länder, ausgewählt nach deinem tatsächlichen Standort"
   },
   "fr": {
     "Apps": "Applis",
@@ -302,7 +304,9 @@ window.NGHIVE_I18N = {
     "Send": "Envoyer",
     "The button opens your mail app with the message ready to go.": "Le bouton ouvre votre messagerie avec un message prêt à partir.",
     "Mobile apps, assembled cell by cell.": "Des applis mobiles, construites alvéole par alvéole.",
-    "Made in a small hive, on a large amount of coffee.": "Fait dans une petite ruche, avec beaucoup de café."
+    "Made in a small hive, on a large amount of coffee.": "Fait dans une petite ruche, avec beaucoup de café.",
+    "Send a list by link — whoever opens it gets the items, no account needed": "Partagez la liste par lien — celui qui l'ouvre récupère les articles, sans compte",
+    "Ready-made store lists for six countries, picked by where you actually are": "Des listes d'enseignes toutes prêtes pour six pays, selon l'endroit où vous êtes vraiment"
   },
   "es": {
     "Apps": "Apps",
@@ -416,7 +420,9 @@ window.NGHIVE_I18N = {
     "Send": "Enviar",
     "The button opens your mail app with the message ready to go.": "El botón abre tu app de correo con el mensaje listo para enviar.",
     "Mobile apps, assembled cell by cell.": "Apps móviles, construidas celda a celda.",
-    "Made in a small hive, on a large amount of coffee.": "Hecho en una pequeña colmena, con muchísimo café."
+    "Made in a small hive, on a large amount of coffee.": "Hecho en una pequeña colmena, con muchísimo café.",
+    "Send a list by link — whoever opens it gets the items, no account needed": "Comparte la lista con un enlace: quien lo abra se lleva los artículos, sin cuenta",
+    "Ready-made store lists for six countries, picked by where you actually are": "Listas de tiendas ya preparadas para seis países, según dónde estés realmente"
   },
   "pt": {
     "Apps": "Apps",
@@ -530,6 +536,8 @@ window.NGHIVE_I18N = {
     "Send": "Enviar",
     "The button opens your mail app with the message ready to go.": "O botão abre seu app de e-mail com a mensagem pronta.",
     "Mobile apps, assembled cell by cell.": "Apps para celular, construídos alvéolo por alvéolo.",
-    "Made in a small hive, on a large amount of coffee.": "Feito numa pequena colmeia, à base de muito café."
+    "Made in a small hive, on a large amount of coffee.": "Feito numa pequena colmeia, à base de muito café.",
+    "Send a list by link — whoever opens it gets the items, no account needed": "Compartilhe a lista por link: quem abrir leva os itens, sem precisar de conta",
+    "Ready-made store lists for six countries, picked by where you actually are": "Listas de lojas prontas para seis países, escolhidas por onde você está de verdade"
   }
 };
