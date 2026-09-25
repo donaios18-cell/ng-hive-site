@@ -37,6 +37,8 @@ SITES = {
               (".gitignore", ".nojekyll")),
     "collage": ("hcollage-site", "main", "collage", "https://collage.nghive.app/",
                 (".gitignore", ".nojekyll")),
+    "sparrows": ("sparrows-site", "main", "sparrows", "https://sparrows.nghive.app/",
+                 (".gitignore", ".nojekyll")),
 }
 
 
