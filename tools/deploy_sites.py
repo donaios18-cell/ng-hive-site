@@ -88,6 +88,27 @@ def export(path, ref, skip, dest):
     return site
 
 
+def stamp_assets(site, version):
+    """Добавляет ?v=<коммит> к своим css/js в html.
+
+    Cloudflare отдаёт css и js с «хранить 4 часа», а страницу — всегда свежую.
+    Без этого посетитель после правки видит новую разметку со старыми стилями.
+    """
+    pattern = re.compile(r'(?P<attr>href|src)="(?P<url>(?!https?:|//|data:)[^"?#]+\.(?:css|js))"')
+    touched = 0
+    for dirpath, _, files in os.walk(site):
+        for fn in files:
+            if not fn.endswith(".html"):
+                continue
+            path = os.path.join(dirpath, fn)
+            text = io.open(path, encoding="utf-8").read()
+            new = pattern.sub(lambda m: '%s="%s?v=%s"' % (m.group("attr"), m.group("url"), version), text)
+            if new != text:
+                io.open(path, "w", encoding="utf-8").write(new)
+                touched += 1
+    return touched
+
+
 def deploy(name, dry_run=False):
     repo, branch, project, url, skip = SITES[name]
     path, sha, subject, ref = fresh_commit(repo, branch)
@@ -95,8 +116,11 @@ def deploy(name, dry_run=False):
     tmp = tempfile.mkdtemp(prefix="nghive-")
     try:
         site = export(path, ref, skip, tmp)
+        stamped = stamp_assets(site, sha)
         files = sorted(os.path.relpath(os.path.join(d, f), site).replace("\\", "/")
                        for d, _, fs in os.walk(site) for f in fs)
+        if stamped:
+            print("   страниц с версией стилей: %d" % stamped)
         print("   файлов: %d" % len(files))
         if dry_run:
             for f in files:
