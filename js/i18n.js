@@ -209,7 +209,9 @@ window.NGHIVE_I18N = {
     "To do": "Offen",
     "Done": "Erledigt",
     "Overdue": "Überfällig",
-    "Book the car service": "Werkstatttermin buchen"
+    "Book the car service": "Werkstatttermin buchen",
+    "4 items left": "noch 4 Artikel",
+    "Nearby": "In der Nähe"
   },
   "fr": {
     "Apps": "Applis",
@@ -344,7 +346,9 @@ window.NGHIVE_I18N = {
     "To do": "À faire",
     "Done": "Fait",
     "Overdue": "En retard",
-    "Book the car service": "Prendre rendez-vous au garage"
+    "Book the car service": "Prendre rendez-vous au garage",
+    "4 items left": "4 articles restants",
+    "Nearby": "À proximité"
   },
   "es": {
     "Apps": "Apps",
@@ -479,7 +483,9 @@ window.NGHIVE_I18N = {
     "To do": "Pendiente",
     "Done": "Hecho",
     "Overdue": "Atrasado",
-    "Book the car service": "Pedir cita en el taller"
+    "Book the car service": "Pedir cita en el taller",
+    "4 items left": "quedan 4 artículos",
+    "Nearby": "Cerca"
   },
   "pt": {
     "Apps": "Apps",
@@ -614,6 +620,8 @@ window.NGHIVE_I18N = {
     "To do": "A fazer",
     "Done": "Feito",
     "Overdue": "Atrasado",
-    "Book the car service": "Agendar a revisão do carro"
+    "Book the car service": "Agendar a revisão do carro",
+    "4 items left": "faltam 4 itens",
+    "Nearby": "Por perto"
   }
 };

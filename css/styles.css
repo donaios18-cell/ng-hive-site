@@ -283,6 +283,35 @@ html[data-theme="dark"] .btn-store{background:#fff;color:#111316;border-color:#f
 .ph-toast span{font-size:.78rem;opacity:.8}
 @keyframes toast{0%,55%{transform:translateY(90px);opacity:0}70%,92%{transform:none;opacity:1}100%{transform:translateY(90px);opacity:0}}
 
+/* макет ShopPing: светлый экран в цветах самого приложения */
+.sh-screen{background:#FFF7F3;color:#271A13;gap:9px;padding-top:42px}
+.sh-head{display:flex;align-items:center;gap:10px;padding-bottom:2px}
+.sh-store{width:34px;height:34px;flex:none;border-radius:12px;display:grid;place-items:center;font-size:1rem;
+  background:linear-gradient(135deg,#FB923C,#EA580C);box-shadow:0 6px 14px rgba(234,88,12,.32)}
+.sh-name{flex:1;min-width:0}
+.sh-name b{display:block;font-size:1.02rem;font-weight:800;letter-spacing:-.02em}
+.sh-name small{font-size:.68rem;color:#8A6A55}
+.sh-near{flex:none;font-size:.62rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+  color:#EA580C;background:#FFE7D5;padding:5px 10px;border-radius:999px}
+.sh-row{display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:14px;background:#fff;
+  font-size:.84rem;font-weight:600;box-shadow:0 2px 8px rgba(39,26,19,.07)}
+.sh-row i{width:19px;height:19px;flex:none;border-radius:7px;border:2px solid #E0CFC0;display:grid;place-items:center;
+  font-style:normal;font-size:.68rem;color:#fff;line-height:1}
+.sh-row span{flex:1}
+.sh-row em{font-style:normal;font-size:.9rem;opacity:.85}
+.sh-row.done{opacity:.55}
+.sh-row.done span{text-decoration:line-through}
+.sh-row.done i{background:#2e9e57;border-color:#2e9e57}
+.sh-toast{margin-top:auto;display:flex;align-items:center;gap:10px;padding:13px;border-radius:18px;color:#fff;
+  background:linear-gradient(135deg,#FB923C,#EA580C);box-shadow:0 14px 28px rgba(234,88,12,.34);
+  animation:sh-toast 5.5s ease-in-out infinite}
+.sh-bell{width:30px;height:30px;flex:none;border-radius:50%;display:grid;place-items:center;font-size:.92rem;
+  background:rgba(255,255,255,.24)}
+.sh-toast b{display:block;font-size:.84rem;font-weight:800}
+.sh-toast small{font-size:.72rem;opacity:.92}
+@keyframes sh-toast{0%,42%{transform:translateY(96px);opacity:0}
+  56%,88%{transform:none;opacity:1}100%{transform:translateY(96px);opacity:0}}
+
 /* макет Sparrows: яркий календарь, как на сайте приложения */
 .sp-screen{background:#F6F5F2;color:#1B1B1F;gap:9px;padding-top:40px}
 .sp-title{font-size:1.18rem;font-weight:800;letter-spacing:-.02em}
