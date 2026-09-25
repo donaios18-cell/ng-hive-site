@@ -94,7 +94,8 @@ def stamp_assets(site, version):
     Cloudflare отдаёт css и js с «хранить 4 часа», а страницу — всегда свежую.
     Без этого посетитель после правки видит новую разметку со старыми стилями.
     """
-    pattern = re.compile(r'(?P<attr>href|src)="(?P<url>(?!https?:|//|data:)[^"?#]+\.(?:css|js))"')
+    pattern = re.compile(
+        r'(?P<attr>href|src)="(?P<url>(?!https?:|//|data:)[^"?#]+\.(?:css|js))(?:\?[^"#]*)?"')
     touched = 0
     for dirpath, _, files in os.walk(site):
         for fn in files:
