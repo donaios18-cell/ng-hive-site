@@ -37,11 +37,17 @@
   var langBtn = $('#langToggle');
   var langList = $('#langList');
 
-  // Сохранённый выбор посетителя, иначе английский
+  // Сохранённый выбор посетителя, иначе язык браузера, если он у нас есть, иначе английский
   function detectLang() {
     var saved = null;
     try { saved = localStorage.getItem('nghive-lang'); } catch (e) {}
-    return saved && CODES.indexOf(saved) !== -1 ? saved : 'en';
+    if (saved && CODES.indexOf(saved) !== -1) return saved;
+    var prefs = navigator.languages || [navigator.language || 'en'];
+    for (var i = 0; i < prefs.length; i++) {
+      var code = String(prefs[i]).slice(0, 2).toLowerCase();
+      if (CODES.indexOf(code) !== -1) return code;
+    }
+    return 'en';
   }
   var lang = detectLang();
 

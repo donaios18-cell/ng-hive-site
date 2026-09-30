@@ -209,6 +209,7 @@ window.NGHIVE_I18N = {
     "To do": "Offen",
     "Done": "Erledigt",
     "Overdue": "Überfällig",
+    "Dad": "Papa",
     "Book the car service": "Werkstatttermin buchen",
     "4 items left": "noch 4 Artikel",
     "Nearby": "In der Nähe"
@@ -346,6 +347,7 @@ window.NGHIVE_I18N = {
     "To do": "À faire",
     "Done": "Fait",
     "Overdue": "En retard",
+    "Dad": "Papa",
     "Book the car service": "Prendre rendez-vous au garage",
     "4 items left": "4 articles restants",
     "Nearby": "À proximité"
@@ -483,6 +485,7 @@ window.NGHIVE_I18N = {
     "To do": "Pendiente",
     "Done": "Hecho",
     "Overdue": "Atrasado",
+    "Dad": "Papá",
     "Book the car service": "Pedir cita en el taller",
     "4 items left": "quedan 4 artículos",
     "Nearby": "Cerca"
@@ -620,6 +623,7 @@ window.NGHIVE_I18N = {
     "To do": "A fazer",
     "Done": "Feito",
     "Overdue": "Atrasado",
+    "Dad": "Pai",
     "Book the car service": "Agendar a revisão do carro",
     "4 items left": "faltam 4 itens",
     "Nearby": "Por perto"
