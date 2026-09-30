@@ -19,9 +19,45 @@
 <body>
   <div>
     <div class="hex"></div>
-    <h1>This cell is empty</h1>
-    <p>The page you are looking for does not exist.</p>
-    <a href="/">Back to NG Hive</a>
+    <h1 id="nf-title">This cell is empty</h1>
+    <p id="nf-text">The page you are looking for does not exist.</p>
+    <a id="nf-back" href="/">Back to NG Hive</a>
   </div>
+<script>
+  // Missing page in any language: the /xx/ folder of the address, else the
+  // language picked on the site before, else the browser's.
+  (function () {
+    var APP = 'NG Hive', FOLDERS = false;
+    var T = {
+      es: ['Página no encontrada', 'Esta celda está vacía', 'La página que buscas no existe.', 'Volver a ' + APP],
+      de: ['Seite nicht gefunden', 'Diese Wabe ist leer', 'Die Seite, die du suchst, gibt es nicht.', 'Zurück zu ' + APP],
+      fr: ['Page introuvable', 'Cette alvéole est vide', 'La page que vous cherchez n’existe pas.', 'Retour à ' + APP],
+      ru: ['Страница не найдена', 'Эта ячейка пуста', 'Такой страницы нет.', 'На сайт ' + APP],
+      pt: ['Página não encontrada', 'Este alvéolo está vazio', 'A página que você procura não existe.', 'Voltar para ' + APP]
+    };
+    var lang = null;
+    var m = /^\/(es|de|fr|ru|pt)(\/|$)/.exec(location.pathname);
+    if (m && FOLDERS) lang = m[1];
+    if (!lang) {
+      try { lang = localStorage.getItem('nghive-lang'); } catch (e) {}
+    }
+    if (!lang) {
+      var prefs = navigator.languages || [navigator.language || 'en'];
+      for (var i = 0; i < prefs.length && !lang; i++) {
+        var code = String(prefs[i]).slice(0, 2).toLowerCase();
+        if (code === 'en' || T[code]) lang = code;
+      }
+    }
+    var t = T[lang];
+    if (!t) return;
+    document.documentElement.lang = lang;
+    document.title = t[0] + ' — ' + APP;
+    document.getElementById('nf-title').textContent = t[1];
+    document.getElementById('nf-text').textContent = t[2];
+    var back = document.getElementById('nf-back');
+    back.textContent = t[3];
+    if (FOLDERS) back.href = '/' + lang + '/';
+  })();
+</script>
 </body>
 </html>
