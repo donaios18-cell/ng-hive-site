@@ -77,6 +77,7 @@ window.NGHIVE_UI = {
 
 window.NGHIVE_I18N = {
   "de": {
+    "A private section behind a numeric code you choose — a browser and your own file server, with everything it keeps encrypted": "Ein privater Bereich hinter einem Zahlencode, den du selbst wählst — ein Browser und dein eigener Dateiserver, und alles, was er speichert, ist verschlüsselt",
     "The next alarm right on the watch face": "Der nächste Wecker direkt auf dem Zifferblatt",
     "The family's creator decides who sees whom — handy when a family lives in two homes": "Wer die Familie angelegt hat, entscheidet, wer wen sieht — praktisch, wenn eine Familie in zwei Haushalten lebt",
     "No sign-up: your profile comes back on a new phone through Apple or Google": "Keine Registrierung: Dein Profil kommt über Apple oder Google aufs neue Handy zurück",
@@ -218,6 +219,7 @@ window.NGHIVE_I18N = {
     "Nearby": "In der Nähe"
   },
   "fr": {
+    "A private section behind a numeric code you choose — a browser and your own file server, with everything it keeps encrypted": "Un espace privé derrière un code numérique que vous choisissez — un navigateur et votre propre serveur de fichiers, et tout ce qu'il garde est chiffré",
     "The next alarm right on the watch face": "La prochaine alarme directement sur le cadran",
     "The family's creator decides who sees whom — handy when a family lives in two homes": "Le créateur de la famille décide qui voit qui — pratique quand une famille vit dans deux maisons",
     "No sign-up: your profile comes back on a new phone through Apple or Google": "Sans inscription : votre profil revient sur un nouveau téléphone via Apple ou Google",
@@ -359,6 +361,7 @@ window.NGHIVE_I18N = {
     "Nearby": "À proximité"
   },
   "es": {
+    "A private section behind a numeric code you choose — a browser and your own file server, with everything it keeps encrypted": "Una sección privada tras un código numérico que eliges tú — un navegador y tu propio servidor de archivos, y todo lo que guarda está cifrado",
     "The next alarm right on the watch face": "La próxima alarma directamente en la esfera",
     "The family's creator decides who sees whom — handy when a family lives in two homes": "Quien crea la familia decide quién ve a quién — práctico cuando una familia vive en dos casas",
     "No sign-up: your profile comes back on a new phone through Apple or Google": "Sin registro: tu perfil vuelve a un teléfono nuevo a través de Apple o Google",
@@ -500,6 +503,7 @@ window.NGHIVE_I18N = {
     "Nearby": "Cerca"
   },
   "pt": {
+    "A private section behind a numeric code you choose — a browser and your own file server, with everything it keeps encrypted": "Uma seção privada atrás de um código numérico que você escolhe — um navegador e seu próprio servidor de arquivos, e tudo o que ela guarda fica criptografado",
     "The next alarm right on the watch face": "O próximo alarme direto no mostrador",
     "The family's creator decides who sees whom — handy when a family lives in two homes": "Quem criou a família decide quem vê quem — prático quando a família vive em duas casas",
     "No sign-up: your profile comes back on a new phone through Apple or Google": "Sem cadastro: seu perfil volta num celular novo pelo Apple ou pelo Google",
