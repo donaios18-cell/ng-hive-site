@@ -145,7 +145,10 @@ def deploy(name, dry_run=False):
 
 
 if __name__ == "__main__":
-    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    # Консоль Windows по умолчанию в cp1252/cp866 и падает на русском выводе.
+    for stream in (sys.stdout, sys.stderr):
+        stream.reconfigure(encoding="utf-8", errors="replace")
+    args =[a for a in sys.argv[1:] if not a.startswith("--")]
     if not args or (args[0] != "all" and args[0] not in SITES):
         sys.exit("укажите сайт: %s или all" % ", ".join(SITES))
     for n in (SITES if args[0] == "all" else [args[0]]):
