@@ -413,16 +413,16 @@ html[data-theme="dark"] .btn-store{background:#fff;color:#111316;border-color:#f
 
 /* ─────────── подвал ─────────── */
 .site-footer{position:relative;z-index:2;border-top:1px solid var(--line);
-  padding:52px clamp(16px,4vw,32px) 28px;background:var(--bg-2)}
+  padding:34px clamp(16px,4vw,32px) 22px;background:var(--bg-2)}
 .foot-top,.foot-bot{max-width:var(--max);margin:0 auto;display:flex;flex-wrap:wrap;gap:24px;
   align-items:center;justify-content:space-between}
-.foot-brand{display:flex;align-items:center;gap:16px;max-width:420px}
-.foot-brand img{width:74px;border-radius:14px;mix-blend-mode:multiply}
+.foot-brand{display:flex;align-items:center;gap:16px;max-width:min(100%,640px)}
+.foot-brand img{width:62px;border-radius:14px;mix-blend-mode:multiply}
 html[data-theme="dark"] .foot-brand img{mix-blend-mode:normal;background:#fff}
 .foot-nav{display:flex;gap:22px;font-weight:600;font-size:.92rem;flex-wrap:wrap}
 .foot-nav a{color:var(--ink-2);transition:color .25s}
 .foot-nav a:hover{color:var(--honey-deep)}
-.foot-bot{margin-top:34px;padding-top:22px;border-top:1px solid var(--line);
+.foot-bot{margin-top:22px;padding-top:16px;border-top:1px solid var(--line);
   font-size:.82rem;color:var(--steel)}
 
 /* ─────────── кнопка наверх и пчела ─────────── */
