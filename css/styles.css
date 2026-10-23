@@ -181,7 +181,7 @@ html[data-theme="dark"] .hero-art img{mix-blend-mode:normal;background:#fff;box-
 
 /* ─────────── цифры ─────────── */
 .stats{position:relative;z-index:2;max-width:var(--max);margin:0 auto;padding:0 clamp(16px,4vw,32px);
-  display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
 .stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
   padding:26px 22px;text-align:center;backdrop-filter:blur(8px);box-shadow:var(--shadow);transition:.3s}
 .stat:hover{transform:translateY(-6px);border-color:var(--honey)}
@@ -457,6 +457,7 @@ html[data-theme="dark"] .foot-brand img{mix-blend-mode:normal;background:#fff}
   .hero-art{order:-1}
   .hero-art img{width:min(74%,300px)}
   .stats{grid-template-columns:repeat(2,1fr)}
+  .stat:last-child{grid-column:1/-1}
   .app,.app-rev,.contact-card{grid-template-columns:1fr}
   .app-rev .app-art{order:0}
   .app-art{margin-top:8px}
