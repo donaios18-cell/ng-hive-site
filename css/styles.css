@@ -378,6 +378,8 @@ html[data-theme="dark"] .btn-store{background:#fff;color:#111316;border-color:#f
   color:var(--honey-deep);margin-bottom:12px}
 .road h3{margin-bottom:8px}
 .road-empty{border-style:dashed;background:transparent}
+.road-link{display:inline-block;margin-top:12px;font-weight:700;color:var(--honey-deep);text-decoration:none}
+.road-link:hover{text-decoration:underline}
 
 /* ─────────── FAQ ─────────── */
 .faq-list{display:grid;gap:12px}

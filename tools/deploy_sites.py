@@ -39,6 +39,8 @@ SITES = {
                 (".gitignore", ".nojekyll")),
     "sparrows": ("sparrows-site", "main", "sparrows", "https://sparrows.nghive.app/",
                  (".gitignore", ".nojekyll")),
+    "spectriq": ("spectriq-site", "main", "spectriq", "https://spectriq.nghive.app/",
+                 (".gitignore", ".nojekyll")),
 }
 
 

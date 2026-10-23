@@ -12,6 +12,12 @@
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "8778", "--directory", "D:/whatchalarm-site"],
       "port": 8778
+    },
+    {
+      "name": "spectriq-site",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8779", "--directory", "D:/spectriq-site"],
+      "port": 8779
     }
   ]
 }
