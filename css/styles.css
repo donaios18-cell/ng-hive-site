@@ -425,6 +425,76 @@ html[data-theme="dark"] .foot-brand img{mix-blend-mode:normal;background:#fff}
 .foot-bot{margin-top:22px;padding-top:16px;border-top:1px solid var(--line);
   font-size:.82rem;color:var(--steel)}
 
+/* ─────────── список всех приложений (страница /apps) ─────────── */
+.app-index{list-style:none;margin:0 0 46px;padding:0;border:1px solid var(--line);border-radius:24px;
+  background:var(--card);backdrop-filter:blur(10px);box-shadow:var(--shadow);overflow:hidden}
+.app-index li{display:grid;grid-template-columns:minmax(150px,auto) 1fr auto;gap:10px 22px;
+  align-items:center;padding:16px clamp(16px,3vw,26px);border-top:1px solid var(--line)}
+.app-index li:first-child{border-top:0}
+.app-index li:hover{background:var(--bg-2)}
+.ai-name{font-weight:800;font-size:1.08rem;letter-spacing:-.01em;color:var(--ink)}
+.ai-name:hover{color:var(--honey-deep)}
+.ai-tag{color:var(--ink-2);font-size:.92rem}
+.ai-links{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.ai-links a,.ai-links .ai-none{padding:7px 13px;border-radius:10px;font-size:.82rem;font-weight:700;
+  border:1px solid var(--line);white-space:nowrap}
+.ai-links a{color:var(--ink);background:var(--bg-2);transition:.25s}
+.ai-links a:hover{border-color:var(--honey);color:var(--honey-deep);transform:translateY(-2px)}
+.ai-links .ai-none{color:var(--steel);opacity:.65;font-weight:600}
+@media (max-width:760px){
+  .app-index li{grid-template-columns:1fr}
+  .ai-links{justify-content:flex-start}
+}
+
+/* ─────────── короткий список на главной ─────────── */
+.app-chips{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 26px;padding:0}
+.app-chips a{display:inline-block;padding:8px 16px;border-radius:999px;border:1px solid var(--line);
+  background:var(--bg-2);font-weight:700;font-size:.88rem;color:var(--ink-2);transition:.25s}
+.app-chips a:hover{border-color:var(--honey);color:var(--honey-deep);transform:translateY(-2px)}
+.apps-cta{margin-top:4px}
+.site-nav a.is-here{color:var(--honey-deep)}
+
+/* макет Spectriq: профиль по четырём областям */
+.sq-screen{background:#0E1326;color:#EAF0FF;gap:12px;padding-top:40px}
+.sq-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.sq-head b{font-size:1.02rem;font-weight:800}
+.sq-head small{font-size:.7rem;color:#8FA0C8}
+.sq-row{display:grid;grid-template-columns:82px minmax(36px,1fr) 24px;align-items:center;gap:7px;font-size:.64rem}
+.sq-row i{font-style:normal;font-weight:600;color:#B9C6E6;white-space:nowrap}
+.sq-row span{height:9px;border-radius:999px;background:rgba(255,255,255,.1);overflow:hidden}
+.sq-row em{display:block;height:100%;border-radius:999px;
+  background:linear-gradient(90deg,#5B8CFF,#9B6CFF);animation:sq-fill 2.4s cubic-bezier(.2,.8,.3,1) both}
+.sq-row:nth-child(3) em{animation-delay:.15s}
+.sq-row:nth-child(4) em{animation-delay:.3s}
+.sq-row:nth-child(5) em{animation-delay:.45s}
+.sq-row b{font-size:.78rem;font-weight:800;text-align:right;color:#EAF0FF}
+.sq-note{margin-top:auto;padding:11px 13px;border-radius:14px;font-size:.76rem;line-height:1.45;
+  color:#C9D6F5;background:rgba(91,140,255,.16);border:1px solid rgba(91,140,255,.3)}
+@keyframes sq-fill{from{width:0 !important}}
+
+/* макет Quillfox: расшифровка по ходу речи */
+.qf-screen{background:#FBF9F5;color:#241F1A;gap:9px;padding-top:40px}
+.qf-head{display:flex;align-items:center;gap:9px;padding-bottom:4px;border-bottom:1px solid #EDE5D8}
+.qf-head b{flex:1;font-size:.92rem;font-weight:800}
+.qf-head small{font-size:.74rem;color:#9A8A77}
+.qf-dot{width:9px;height:9px;flex:none;border-radius:50%;background:#E0533F;
+  animation:qf-pulse 1.6s ease-in-out infinite}
+.qf-line{display:flex;gap:8px;font-size:.8rem;line-height:1.45}
+.qf-line i{font-style:normal;color:#C9B9A4}
+.qf-line.now{color:#6B5B49}
+.qf-line.now span{border-bottom:2px solid rgba(224,83,63,.35)}
+.qf-wave{margin-top:auto;display:flex;align-items:flex-end;gap:5px;height:34px}
+.qf-wave s{flex:1;text-decoration:none;border-radius:4px 4px 0 0;background:#E8A36F;
+  animation:qf-wave 1.1s ease-in-out infinite}
+.qf-wave s:nth-child(2){animation-delay:.12s}
+.qf-wave s:nth-child(3){animation-delay:.24s}
+.qf-wave s:nth-child(4){animation-delay:.36s}
+.qf-wave s:nth-child(5){animation-delay:.48s}
+.qf-wave s:nth-child(6){animation-delay:.6s}
+.qf-wave s:nth-child(7){animation-delay:.72s}
+@keyframes qf-pulse{0%,100%{opacity:1}50%{opacity:.25}}
+@keyframes qf-wave{0%,100%{height:22%}50%{height:100%}}
+
 /* ─────────── кнопка наверх и пчела ─────────── */
 .to-top{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:14px;z-index:90;
   border:1px solid var(--line);background:var(--card-solid);color:var(--ink);cursor:pointer;font-size:1.1rem;

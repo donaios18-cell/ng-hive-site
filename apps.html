@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All apps — NG Hive</title>
+<meta name="description" content="Every NG Hive app in one place: WhatchAlarm, ShopPing, H.Collage, Sparrows, Spectriq and Quillfox — with links to each app’s website, the App Store and Google Play.">
+<meta name="theme-color" content="#f2b134">
+<meta property="og:title" content="All apps — NG Hive">
+<meta property="og:description" content="Six apps in one list, each with its website and store links.">
+<meta property="og:image" content="https://nghive.app/assets/header.jpg">
+<meta property="og:image:width" content="1568">
+<meta property="og:image:height" content="672">
+<meta property="og:url" content="https://nghive.app/apps">
+<meta property="og:site_name" content="NG Hive">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,4 93,27 93,73 50,96 7,73 7,27' fill='%23f2b134'/%3E%3Ctext x='50' y='66' font-family='Arial,sans-serif' font-size='38' font-weight='bold' text-anchor='middle' fill='%23333'%3ENG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+
+<link rel="canonical" href="https://nghive.app/apps">
+</head>
+<body data-title-key="title.apps">
+
+<div class="scroll-progress"><span id="progressBar"></span></div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="/" id="brandLogo" title="Tap the honeycomb — a bee flies out :)">
+    <span class="brand-mark">
+      <svg viewBox="0 0 120 112" aria-hidden="true">
+        <g class="hx-outer" fill="none" stroke="currentColor" stroke-width="5">
+          <polygon points="42,6 64,19 64,45 42,58 20,45 20,19"/>
+          <polygon points="78,6 100,19 100,45 78,58 56,45 56,19" transform="translate(0,0)"/>
+          <polygon points="24,54 46,67 46,93 24,106 2,93 2,67"/>
+          <polygon points="96,54 118,67 118,93 96,106 74,93 74,67"/>
+        </g>
+        <polygon class="hx-core" points="60,30 82,43 82,69 60,82 38,69 38,43"/>
+        <text class="hx-text" x="60" y="64" text-anchor="middle">NG</text>
+      </svg>
+    </span>
+    <span class="brand-word">NG<span>HIVE</span></span>
+  </a>
+
+  <nav class="site-nav" id="siteNav">
+    <a class="is-here" href="/apps" data-en="Apps" data-ru="Приложения">Apps</a>
+    <a href="/#about" data-en="Studio" data-ru="Студия">Studio</a>
+    <a href="/#process" data-en="Process" data-ru="Процесс">Process</a>
+    <a href="/#roadmap" data-en="Roadmap" data-ru="Планы">Roadmap</a>
+    <a href="/#faq" data-en="FAQ" data-ru="Вопросы">FAQ</a>
+  </nav>
+
+  <div class="header-tools">
+    <div class="lang-menu" id="langMenu">
+      <button class="icon-btn lang-btn" id="langToggle" type="button" aria-haspopup="true" aria-expanded="false" title="Language">EN</button>
+      <ul class="lang-list" id="langList" role="menu"></ul>
+    </div>
+    <button class="icon-btn" id="themeToggle" type="button" title="Theme" aria-label="Theme">
+      <svg viewBox="0 0 24 24" class="ic-sun"><circle cx="12" cy="12" r="5"/><g stroke-linecap="round"><path d="M12 1.5v3M12 19.5v3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M1.5 12h3M19.5 12h3M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></g></svg>
+      <svg viewBox="0 0 24 24" class="ic-moon"><path d="M21 13a8.5 8.5 0 1 1-10-10 7 7 0 0 0 10 10z"/></svg>
+    </button>
+    <a class="btn btn-mini" href="/#contact" data-en="Contact" data-ru="Связаться">Contact</a>
+    <button class="burger" id="burger" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ══════════ ВСЕ ПРИЛОЖЕНИЯ ══════════ -->
+  <section class="section apps" id="apps">
+    <div class="sec-head reveal">
+      <p class="eyebrow" data-en="Products" data-ru="Продукты">Products</p>
+      <h2 data-en="All six apps" data-ru="Все шесть приложений">All six apps</h2>
+      <p class="lead" data-en="Jump straight to the one you came for — its own website, the App Store or Google Play. The full description of each is further down." data-ru="Переходите сразу к нужному: его сайт, App Store или Google Play. Подробное описание каждого — ниже.">Jump straight to the one you came for — its own website, the App Store or Google Play. The full description of each is further down.</p>
+    </div>
+    <ul class="app-index reveal">
+      <li>
+        <a class="ai-name" href="#whatchalarm">WhatchAlarm</a>
+        <span class="ai-tag" data-en="A smart alarm on your Apple Watch" data-ru="Умный будильник на Apple Watch">A smart alarm on your Apple Watch</span>
+        <span class="ai-links"><a href="https://watch.nghive.app/" target="_blank" rel="noopener" data-en="Website" data-ru="Сайт">Website</a><a href="https://apps.apple.com/us/app/whatchalarm/id6804431307" target="_blank" rel="noopener" data-en="App Store" data-ru="App Store">App Store</a><span class="ai-none" data-en="soon" data-ru="скоро">soon</span></span>
+      </li>
+      <li>
+        <a class="ai-name" href="#shopping">ShopPing</a>
+        <span class="ai-tag" data-en="A shopping list that pings you at the store" data-ru="Список покупок, который напомнит у магазина">A shopping list that pings you at the store</span>
+        <span class="ai-links"><a href="https://shopping.nghive.app/" target="_blank" rel="noopener" data-en="Website" data-ru="Сайт">Website</a><a href="https://apps.apple.com/us/app/shopping-nearby/id6802057059" target="_blank" rel="noopener" data-en="App Store" data-ru="App Store">App Store</a><a href="https://play.google.com/store/apps/details?id=app.nghive.shopping" target="_blank" rel="noopener" data-en="Google Play" data-ru="Google Play">Google Play</a></span>
+      </li>
+      <li>
+        <a class="ai-name" href="#hcollage">H.Collage</a>
+        <span class="ai-tag" data-en="A collage of 2 to 10 photos" data-ru="Коллаж из 2–10 фотографий">A collage of 2 to 10 photos</span>
+        <span class="ai-links"><a href="https://collage.nghive.app/" target="_blank" rel="noopener" data-en="Website" data-ru="Сайт">Website</a><a href="https://apps.apple.com/us/app/h-collage/id6815431056" target="_blank" rel="noopener" data-en="App Store" data-ru="App Store">App Store</a><a href="https://play.google.com/store/apps/details?id=app.nghive.hcollage" target="_blank" rel="noopener" data-en="Google Play" data-ru="Google Play">Google Play</a></span>
+      </li>
+      <li>
+        <a class="ai-name" href="#sparrows">Sparrows</a>
+        <span class="ai-tag" data-en="Family tasks that actually get done" data-ru="Семейные задания, которые доходят до конца">Family tasks that actually get done</span>
+        <span class="ai-links"><a href="https://sparrows.nghive.app/" target="_blank" rel="noopener" data-en="Website" data-ru="Сайт">Website</a><a href="https://apps.apple.com/us/app/sparrows-family-tasks/id6815424290" target="_blank" rel="noopener" data-en="App Store" data-ru="App Store">App Store</a><a href="https://play.google.com/store/apps/details?id=app.nghive.sparrows" target="_blank" rel="noopener" data-en="Google Play" data-ru="Google Play">Google Play</a></span>
+      </li>
+      <li>
+        <a class="ai-name" href="#spectriq">Spectriq</a>
+        <span class="ai-tag" data-en="A test made of puzzles, without words" data-ru="Тест из головоломок, без слов">A test made of puzzles, without words</span>
+        <span class="ai-links"><a href="https://spectriq.nghive.app/" target="_blank" rel="noopener" data-en="Website" data-ru="Сайт">Website</a><span class="ai-none" data-en="soon" data-ru="скоро">soon</span><span class="ai-none" data-en="soon" data-ru="скоро">soon</span></span>
+      </li>
+      <li>
+        <a class="ai-name" href="#quillfox">Quillfox</a>
+        <span class="ai-tag" data-en="Live transcription of the speech around you" data-ru="Живая расшифровка речи вокруг">Live transcription of the speech around you</span>
+        <span class="ai-links"><span class="ai-none" data-en="soon" data-ru="скоро">soon</span><span class="ai-none" data-en="soon" data-ru="скоро">soon</span><span class="ai-none" data-en="soon" data-ru="скоро">soon</span></span>
+      </li>
+    </ul>
+
+    <article class="app reveal" id="whatchalarm">
+      <div class="app-text">
+        <span class="pill pill-store" data-en="On the App Store" data-ru="В App Store">On the App Store</span>
+        <h3>WhatchAlarm</h3>
+        <p class="app-tag" data-en="A smart alarm that lives on your Apple Watch" data-ru="Умный будильник, который живёт прямо на Apple Watch">A smart alarm that lives on your Apple Watch</p>
+        <p data-en="Instead of tearing you out of deep sleep at an exact minute, WhatchAlarm watches your heart rate and wrist movement in a window before your deadline and picks the lightest moment to wake you. If that moment never comes, it wakes you at the deadline anyway — oversleeping is not an option." data-ru="Вместо того чтобы вырывать вас из глубокого сна ровно в назначенную минуту, WhatchAlarm следит за пульсом и движением запястья в окне перед крайним сроком и выбирает самый лёгкий момент для подъёма. Если такой момент так и не наступил — разбудит всё равно в срок. Проспать невозможно.">Instead of tearing you out of deep sleep at an exact minute, WhatchAlarm watches your heart rate and wrist movement in a window before your deadline and picks the lightest moment to wake you. If that moment never comes, it wakes you at the deadline anyway — oversleeping is not an option.</p>
+        <ul class="app-list">
+          <li data-en="The whole engine runs natively on the watch — the iPhone can stay in another room" data-ru="Весь движок работает на самих часах — iPhone может лежать в другой комнате">The whole engine runs natively on the watch — the iPhone can stay in another room</li>
+          <li data-en="Gentle taps in the light moment; at the deadline, the strongest vibration and then sound" data-ru="В лёгкий момент — мягкие касания, в крайний срок — самая сильная вибрация, а потом и звук">Gentle taps in the light moment; at the deadline, the strongest vibration and then sound</li>
+          <li data-en="A window of 10 to 30 minutes and a weekly schedule with its own time for every day" data-ru="Окно от 10 до 30 минут и недельное расписание со своим временем на каждый день">A window of 10 to 30 minutes and a weekly schedule with its own time for every day</li>
+          <li data-en="The next alarm right on the watch face" data-ru="Следующий будильник — прямо на циферблате">The next alarm right on the watch face</li>
+          <li data-en="Heart rate and movement are read on the watch and never uploaded anywhere" data-ru="Пульс и движение считываются на часах и никуда не отправляются">Heart rate and movement are read on the watch and never uploaded anywhere</li>
+        </ul>
+        <div class="app-links">
+          <a class="btn btn-store" href="https://apps.apple.com/us/app/whatchalarm/id6804431307" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.64c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-2.99-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.4-3.66zM14.1 5.9c.63-.77 1.06-1.83.94-2.9-.91.04-2.02.61-2.67 1.37-.58.67-1.09 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.27z"/></svg>
+            <span><small data-en="Download on the" data-ru="Скачать в">Download on the</small><b>App Store</b></span>
+          </a>
+          <a class="btn btn-small" href="https://watch.nghive.app/" target="_blank" rel="noopener" data-en="App website ↗" data-ru="Сайт приложения ↗">App website ↗</a>
+        </div>
+        <div class="app-meta">
+          <span>Apple Watch · watchOS 10+</span>
+          <span data-en="14 days free, then a one-time purchase" data-ru="14 дней бесплатно, потом разовая покупка">14 days free, then a one-time purchase</span>
+          <span>Swift · SwiftUI · HealthKit</span>
+        </div>
+      </div>
+      <div class="app-art" data-tilt>
+        <div class="watch">
+          <div class="watch-screen">
+            <p class="w-small" data-en="Alarm set" data-ru="Будильник включён">Alarm set</p>
+            <p class="w-time">06:40</p>
+            <p class="w-small" data-en="window 30 min" data-ru="окно 30 мин">window 30 min</p>
+            <div class="w-pulse"><svg viewBox="0 0 120 40" preserveAspectRatio="none"><polyline points="0,20 15,20 22,8 30,32 38,20 55,20 62,12 70,28 78,20 120,20"/></svg></div>
+          </div>
+          <span class="watch-crown"></span>
+        </div>
+      </div>
+    </article>
+    <article class="app app-rev reveal" id="shopping">
+      <div class="app-text">
+        <span class="pill pill-store" data-en="On the App Store and Google Play" data-ru="В App Store и Google Play">On the App Store and Google Play</span>
+        <h3>ShopPing</h3>
+        <p class="app-tag" data-en="A shopping list that pings you when you are next to the store" data-ru="Список покупок, который сам напомнит о себе у магазина">A shopping list that pings you when you are next to the store</p>
+        <p data-en="Every store you actually shop at gets its own list — a big chain or the little place around the corner you pinned on the map yourself. The moment your phone notices you are nearby and the list is not empty, it quietly reminds you. No account, no subscription, and your lists never leave the phone." data-ru="Для каждого магазина, в который вы реально ходите, — свой список: хоть крупная сеть, хоть маленькая лавка за углом, которую вы сами отметили точкой на карте. Как только телефон замечает, что вы рядом, а список не пуст, он тихо напоминает. Без регистрации, без подписки, а списки не покидают телефон.">Every store you actually shop at gets its own list — a big chain or the little place around the corner you pinned on the map yourself. The moment your phone notices you are nearby and the list is not empty, it quietly reminds you. No account, no subscription, and your lists never leave the phone.</p>
+        <ul class="app-list">
+          <li data-en="Geofenced reminders that keep working even when the app is closed" data-ru="Напоминания по геозонам работают, даже когда приложение закрыто">Geofenced reminders that keep working even when the app is closed</li>
+          <li data-en="Alerts land on a paired Apple Watch too, and a test one can be sent from Settings" data-ru="Напоминание приходит и на Apple Watch, а пробное можно отправить из настроек">Alerts land on a paired Apple Watch too, and a test one can be sent from Settings</li>
+          <li data-en="Send a list by link — whoever opens it gets the items, no account needed" data-ru="Список отправляется ссылкой — открывший забирает позиции себе, без регистрации">Send a list by link — whoever opens it gets the items, no account needed</li>
+          <li data-en="Ready-made store lists for a dozen countries, picked by where you actually are" data-ru="Готовые списки магазинных сетей для дюжины стран, по вашему реальному местоположению">Ready-made store lists for a dozen countries, picked by where you actually are</li>
+          <li data-en="Add your own stores by dropping a pin on the map" data-ru="Свои магазины добавляются точкой на карте">Add your own stores by dropping a pin on the map</li>
+          <li data-en="A photo and a product link for every item, drag to reorder" data-ru="Фото и ссылка на товар у каждой позиции, порядок меняется перетаскиванием">A photo and a product link for every item, drag to reorder</li>
+          <li data-en="Its own font size control — readable without glasses" data-ru="Свой размер шрифта — читается и без очков">Its own font size control — readable without glasses</li>
+        </ul>
+        <div class="app-links">
+          <a class="btn btn-store" href="https://apps.apple.com/us/app/shopping-nearby/id6802057059" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.64c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-2.99-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.4-3.66zM14.1 5.9c.63-.77 1.06-1.83.94-2.9-.91.04-2.02.61-2.67 1.37-.58.67-1.09 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.27z"/></svg>
+            <span><small data-en="Download on the" data-ru="Скачать в">Download on the</small><b>App Store</b></span>
+          </a>
+          <a class="btn btn-store" href="https://play.google.com/store/apps/details?id=app.nghive.shopping" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.6c-.4.4-.6.9-.6 1.5v15.8c0 .6.2 1.1.6 1.5l.2.1L13 12.4v-.2L3.8 2.5l-.2.1zM16 15.3l-3-3v-.2l3-3 3.5 2c1 .6 1 1.6 0 2.2l-3.5 2zM4.4 21.5 13.7 13l2.3 2.3-10.8 6c-.3.2-.7.3-1 .2l.2 0zM13.7 11l-9.3-9.4c.3-.1.6 0 .9.2L16 8l-2.3 3z"/></svg>
+            <span><small data-en="Get it on" data-ru="Доступно в">Get it on</small><b>Google Play</b></span>
+          </a>
+          <a class="btn btn-small" href="https://shopping.nghive.app/" target="_blank" rel="noopener" data-en="App website ↗" data-ru="Сайт приложения ↗">App website ↗</a>
+        </div>
+        <div class="app-meta">
+          <span data-en="iOS · Android · six languages" data-ru="iOS · Android · шесть языков">iOS · Android · six languages</span>
+          <span data-en="14 days free, then a one-time purchase" data-ru="14 дней бесплатно, потом разовая покупка">14 days free, then a one-time purchase</span>
+          <span data-en="On the App Store as «ShopPing Nearby»" data-ru="В App Store — «ShopPing Nearby»">On the App Store as «ShopPing Nearby»</span>
+        </div>
+      </div>
+      <div class="app-art" data-tilt>
+        <div class="phone">
+          <div class="phone-screen sh-screen">
+            <div class="sh-head">
+              <span class="sh-store">🛒</span>
+              <span class="sh-name"><b>Costco</b><small data-en="4 items left" data-ru="осталось 4 позиции">4 items left</small></span>
+              <span class="sh-near" data-en="Nearby" data-ru="Рядом">Nearby</span>
+            </div>
+            <div class="sh-row"><i></i><span data-en="Milk, 2 %" data-ru="Молоко 2 %">Milk, 2 %</span><em>🥛</em></div>
+            <div class="sh-row"><i></i><span data-en="Coffee beans" data-ru="Кофе в зёрнах">Coffee beans</span><em>☕</em></div>
+            <div class="sh-row done"><i>✓</i><span data-en="Paper towels" data-ru="Бумажные полотенца">Paper towels</span><em>🧻</em></div>
+            <div class="sh-row"><i></i><span data-en="AA batteries" data-ru="Батарейки AA">AA batteries</span><em>🔋</em></div>
+            <div class="sh-toast">
+              <span class="sh-bell">📍</span>
+              <span><b data-en="You are near Costco" data-ru="Вы рядом с Costco">You are near Costco</b><small data-en="4 items on the list" data-ru="4 позиции в списке">4 items on the list</small></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="app reveal" id="hcollage">
+      <div class="app-text">
+        <span class="pill pill-store" data-en="On the App Store and Google Play" data-ru="В App Store и Google Play">On the App Store and Google Play</span>
+        <h3>H.Collage</h3>
+        <p class="app-tag" data-en="A collage of 2 to 10 photos, without the fuss" data-ru="Коллаж из 2–10 фото — без возни">A collage of 2 to 10 photos, without the fuss</p>
+        <p data-en="Say how many photos the collage should have, pick them, and choose a grid from real previews instead of blindly cycling through layouts. Every photo can be dragged and pinched inside its own cell until it sits exactly right. Then save it to Photos or share it straight away." data-ru="Скажите, сколько фото должно быть в коллаже, выберите их — и берите сетку из настоящих превью, а не вслепую перелистывая раскладки. Каждое фото двигается пальцем и масштабируется щипком прямо внутри своей ячейки, пока не встанет как надо. Потом — сохранить в «Фото» или сразу поделиться.">Say how many photos the collage should have, pick them, and choose a grid from real previews instead of blindly cycling through layouts. Every photo can be dragged and pinched inside its own cell until it sits exactly right. Then save it to Photos or share it straight away.</p>
+        <ul class="app-list">
+          <li data-en="34 layouts for 2 to 10 photos — square, 4:5 or 3:2" data-ru="34 раскладки для 2–10 фото — квадрат, 4:5 или 3:2">34 layouts for 2 to 10 photos — square, 4:5 or 3:2</li>
+          <li data-en="Pan and zoom inside a cell, long-press to swap a photo" data-ru="Двигаем и масштабируем внутри ячейки, долгое нажатие — заменить фото">Pan and zoom inside a cell, long-press to swap a photo</li>
+          <li data-en="A thin white frame between the photos, one switch away" data-ru="Тонкая белая рамка между снимками — одним переключателем">A thin white frame between the photos, one switch away</li>
+          <li data-en="Save to Photos or share in a single tap" data-ru="Сохранение в «Фото» и «Поделиться» в одно касание">Save to Photos or share in a single tap</li>
+          <li data-en="A private section behind a numeric code you choose — a browser and your own file server, with everything it keeps encrypted" data-ru="Личный раздел за числовым кодом, который вы выбираете сами, — браузер и ваш файловый сервер, а всё, что там хранится, зашифровано">A private section behind a numeric code you choose — a browser and your own file server, with everything it keeps encrypted</li>
+        </ul>
+        <div class="app-links">
+          <a class="btn btn-store" href="https://apps.apple.com/us/app/h-collage/id6815431056" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.64c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-2.99-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.4-3.66zM14.1 5.9c.63-.77 1.06-1.83.94-2.9-.91.04-2.02.61-2.67 1.37-.58.67-1.09 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.27z"/></svg>
+            <span><small data-en="Download on the" data-ru="Скачать в">Download on the</small><b>App Store</b></span>
+          </a>
+          <a class="btn btn-store" href="https://play.google.com/store/apps/details?id=app.nghive.hcollage" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.6c-.4.4-.6.9-.6 1.5v15.8c0 .6.2 1.1.6 1.5l.2.1L13 12.4v-.2L3.8 2.5l-.2.1zM16 15.3l-3-3v-.2l3-3 3.5 2c1 .6 1 1.6 0 2.2l-3.5 2zM4.4 21.5 13.7 13l2.3 2.3-10.8 6c-.3.2-.7.3-1 .2l.2 0zM13.7 11l-9.3-9.4c.3-.1.6 0 .9.2L16 8l-2.3 3z"/></svg>
+            <span><small data-en="Get it on" data-ru="Доступно в">Get it on</small><b>Google Play</b></span>
+          </a>
+          <a class="btn btn-small" href="https://collage.nghive.app/" target="_blank" rel="noopener" data-en="App website ↗" data-ru="Сайт приложения ↗">App website ↗</a>
+        </div>
+        <div class="app-meta">
+          <span data-en="iOS · Android · six languages" data-ru="iOS · Android · шесть языков">iOS · Android · six languages</span>
+          <span data-en="14 days free, then a one-time purchase" data-ru="14 дней бесплатно, потом разовая покупка">14 days free, then a one-time purchase</span>
+          <span>React Native · Expo</span>
+        </div>
+      </div>
+      <div class="app-art" data-tilt>
+        <div class="phone">
+          <div class="phone-screen collage-screen">
+            <div class="cg" id="collageDemo">
+              <div class="cg-cell"></div><div class="cg-cell"></div><div class="cg-cell"></div>
+              <div class="cg-cell"></div><div class="cg-cell"></div>
+            </div>
+            <button class="cg-btn" type="button" id="collageShuffle" data-en="Another layout" data-ru="Другая раскладка">Another layout</button>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="app app-rev reveal" id="sparrows">
+      <div class="app-text">
+        <span class="pill pill-store" data-en="On the App Store and Google Play" data-ru="В App Store и Google Play">On the App Store and Google Play</span>
+        <h3>Sparrows</h3>
+        <p class="app-tag" data-en="Family tasks that actually get done" data-ru="Семейные задания, которые доходят до конца">Family tasks that actually get done</p>
+        <p data-en="Parents and children give each other tasks, and the app keeps reminding whoever has to do it until the job is finished. A photo proves it, a parent accepts it, and points turn into rewards the family invented itself." data-ru="Родители и дети дают друг другу задания, а приложение напоминает тому, кому делать, пока дело не закончено. Фото подтверждает, родитель принимает, а баллы превращаются в награды, которые семья придумала сама.">Parents and children give each other tasks, and the app keeps reminding whoever has to do it until the job is finished. A photo proves it, a parent accepts it, and points turn into rewards the family invented itself.</p>
+        <ul class="app-list">
+          <li data-en="Reminders repeat until the task is done and go quiet during each person&#39;s own quiet hours" data-ru="Напоминания повторяются, пока задание не выполнено, и молчат в тихие часы каждого">Reminders repeat until the task is done and go quiet during each person&#39;s own quiet hours</li>
+          <li data-en="Photo proof and a parent&#39;s approval whenever a task needs checking" data-ru="Фото-подтверждение и проверка родителем, когда задание того требует">Photo proof and a parent&#39;s approval whenever a task needs checking</li>
+          <li data-en="Points that turn into rewards the family agreed on" data-ru="Баллы превращаются в награды, о которых семья договорилась">Points that turn into rewards the family agreed on</li>
+          <li data-en="Private by default — a task is between the two people in it" data-ru="Приватность по умолчанию — задание видят только двое">Private by default — a task is between the two people in it</li>
+          <li data-en="The family&#39;s creator decides who sees whom — handy when a family lives in two homes" data-ru="Создатель семьи решает, кто кого видит, — удобно, когда семья живёт в двух домах">The family&#39;s creator decides who sees whom — handy when a family lives in two homes</li>
+          <li data-en="No sign-up: your profile comes back on a new phone through Apple or Google" data-ru="Без регистрации: профиль возвращается на новый телефон через Apple или Google">No sign-up: your profile comes back on a new phone through Apple or Google</li>
+        </ul>
+        <div class="app-links">
+          <a class="btn btn-store" href="https://apps.apple.com/us/app/sparrows-family-tasks/id6815424290" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.64c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-2.99-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.4-3.66zM14.1 5.9c.63-.77 1.06-1.83.94-2.9-.91.04-2.02.61-2.67 1.37-.58.67-1.09 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.27z"/></svg>
+            <span><small data-en="Download on the" data-ru="Скачать в">Download on the</small><b>App Store</b></span>
+          </a>
+          <a class="btn btn-store" href="https://play.google.com/store/apps/details?id=app.nghive.sparrows" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.6c-.4.4-.6.9-.6 1.5v15.8c0 .6.2 1.1.6 1.5l.2.1L13 12.4v-.2L3.8 2.5l-.2.1zM16 15.3l-3-3v-.2l3-3 3.5 2c1 .6 1 1.6 0 2.2l-3.5 2zM4.4 21.5 13.7 13l2.3 2.3-10.8 6c-.3.2-.7.3-1 .2l.2 0zM13.7 11l-9.3-9.4c.3-.1.6 0 .9.2L16 8l-2.3 3z"/></svg>
+            <span><small data-en="Get it on" data-ru="Доступно в">Get it on</small><b>Google Play</b></span>
+          </a>
+          <a class="btn btn-small" href="https://sparrows.nghive.app/" target="_blank" rel="noopener" data-en="App website ↗" data-ru="Сайт приложения ↗">App website ↗</a>
+        </div>
+        <div class="app-meta">
+          <span data-en="iOS · Android · six languages" data-ru="iOS · Android · шесть языков">iOS · Android · six languages</span>
+          <span data-en="14 days free, then one purchase for the whole family" data-ru="14 дней бесплатно, потом одна покупка на всю семью">14 days free, then one purchase for the whole family</span>
+        </div>
+      </div>
+      <div class="app-art" data-tilt>
+        <div class="phone">
+          <div class="phone-screen sp-screen">
+            <div class="sp-title" data-en="Calendar" data-ru="Календарь">Calendar</div>
+            <div class="sp-tabs">
+              <span data-en="Day" data-ru="День">Day</span>
+              <span class="on" data-en="Week" data-ru="Неделя">Week</span>
+              <span data-en="Month" data-ru="Месяц">Month</span>
+            </div>
+            <div class="sp-days"><i>22</i><i>23</i><i class="on">24</i><i>25</i><i>26</i><i>27</i><i>28</i></div>
+            <div class="sp-row sp-live">
+              <span class="sp-ava">🧺</span>
+              <span class="sp-txt"><b data-en="Take out the rubbish" data-ru="Вынести мусор">Take out the rubbish</b><small>18:00 · Pete</small></span>
+              <span class="sp-pills"><em class="sp-pill amber" data-en="To do" data-ru="Сделать">To do</em><em class="sp-pill green" data-en="Done" data-ru="Готово">Done</em></span>
+            </div>
+            <div class="sp-row">
+              <span class="sp-ava">📚</span>
+              <span class="sp-txt"><b data-en="Maths homework" data-ru="Математика">Maths homework</b><small>20:00 · Mary</small></span>
+              <em class="sp-pill blue" data-en="To do" data-ru="Сделать">To do</em>
+            </div>
+            <div class="sp-row">
+              <span class="sp-ava">🚗</span>
+              <span class="sp-txt"><b data-en="Book the car service" data-ru="Записать машину в сервис">Book the car service</b><small data-en="Dad" data-ru="Папа">Dad</small></span>
+              <em class="sp-pill red" data-en="Overdue" data-ru="Просрочено">Overdue</em>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="app app-rev reveal" id="spectriq">
+      <div class="app-text">
+        <span class="pill pill-wip" data-en="In preparation" data-ru="Готовится">In preparation</span>
+        <h3>Spectriq</h3>
+        <p class="app-tag" data-en="A test made of puzzles, without a single word" data-ru="Тест из головоломок, без единого слова">A test made of puzzles, without a single word</p>
+        <p data-en="Patterns, blocks to turn in your head, sequences to remember, symbols to spot against the clock. At the end you get a profile across four areas — logic, space, memory and speed — next to people your own age, instead of one number. Every puzzle is built by the app from rules, so the answers cannot be learned by heart." data-ru="Узоры, блоки, которые надо повернуть в уме, последовательности на запоминание, символы на скорость. В конце — профиль по четырём областям: логика, пространство, память и скорость, рядом с людьми вашего возраста, а не одна цифра. Каждую головоломку приложение строит по правилам, поэтому ответы нельзя выучить наизусть.">Patterns, blocks to turn in your head, sequences to remember, symbols to spot against the clock. At the end you get a profile across four areas — logic, space, memory and speed — next to people your own age, instead of one number. Every puzzle is built by the app from rules, so the answers cannot be learned by heart.</p>
+        <ul class="app-list">
+          <li data-en="Four areas, two kinds of puzzle in each — eight in all" data-ru="Четыре области, по два типа головоломок в каждой — восемь всего">Four areas, two kinds of puzzle in each — eight in all</li>
+          <li data-en="No words and no general knowledge, so the test reads the same in any country" data-ru="Ни слов, ни эрудиции — тест одинаков в любой стране">No words and no general knowledge, so the test reads the same in any country</li>
+          <li data-en="A short run of about 20 minutes, or the full one of about 50 with breaks allowed" data-ru="Короткий прогон примерно на 20 минут или полный на 50, с перерывами">A short run of about 20 minutes, or the full one of about 50 with breaks allowed</li>
+          <li data-en="Works offline and keeps your answers on the phone" data-ru="Работает офлайн, а ответы остаются на телефоне">Works offline and keeps your answers on the phone</li>
+          <li data-en="For entertainment — not a medical, psychological or clinical assessment" data-ru="Для развлечения — это не медицинская, психологическая или клиническая оценка">For entertainment — not a medical, psychological or clinical assessment</li>
+        </ul>
+        <div class="app-links">
+          <a class="btn btn-small" href="https://spectriq.nghive.app/" target="_blank" rel="noopener" data-en="App website ↗" data-ru="Сайт приложения ↗">App website ↗</a>
+        </div>
+        <div class="app-meta">
+          <span data-en="iOS · Android · six languages" data-ru="iOS · Android · шесть языков">iOS · Android · six languages</span>
+          <span data-en="free" data-ru="бесплатно">free</span>
+        </div>
+      </div>
+      <div class="app-art" data-tilt>
+        <div class="phone">
+          <div class="phone-screen sq-screen">
+            <div class="sq-head"><b data-en="Your profile" data-ru="Ваш профиль">Your profile</b><small data-en="age 30–34" data-ru="возраст 30–34">age 30–34</small></div>
+            <div class="sq-row"><i data-en="Logic" data-ru="Логика">Logic</i><span><em style="width:84%"></em></span><b>84</b></div>
+            <div class="sq-row"><i data-en="Space" data-ru="Пространство">Space</i><span><em style="width:91%"></em></span><b>91</b></div>
+            <div class="sq-row"><i data-en="Memory" data-ru="Память">Memory</i><span><em style="width:62%"></em></span><b>62</b></div>
+            <div class="sq-row"><i data-en="Speed" data-ru="Скорость">Speed</i><span><em style="width:70%"></em></span><b>70</b></div>
+            <div class="sq-note" data-en="Strongest: turning shapes in your head" data-ru="Сильнее всего: поворот фигур в уме">Strongest: turning shapes in your head</div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="app reveal" id="quillfox">
+      <div class="app-text">
+        <span class="pill pill-wip" data-en="In preparation" data-ru="Готовится">In preparation</span>
+        <h3>Quillfox</h3>
+        <p class="app-tag" data-en="Live transcription of what is being said around you" data-ru="Живая расшифровка того, что говорят вокруг">Live transcription of what is being said around you</p>
+        <p data-en="Switch it on and the iPhone writes down the speech around it as it goes — a meeting, a lecture, an appointment you want to remember exactly. Recognition runs on the phone itself: the sound goes nowhere. What you get is a transcript you can read, share as text or save as a .txt file." data-ru="Включите — и iPhone записывает словами речь вокруг себя по ходу дела: встречу, лекцию, приём, который хочется запомнить точно. Распознавание идёт на самом телефоне: звук никуда не уходит. На выходе — расшифровка, которую можно прочитать, отправить текстом или сохранить файлом .txt.">Switch it on and the iPhone writes down the speech around it as it goes — a meeting, a lecture, an appointment you want to remember exactly. Recognition runs on the phone itself: the sound goes nowhere. What you get is a transcript you can read, share as text or save as a .txt file.</p>
+        <ul class="app-list">
+          <li data-en="Recognition happens on the device — speech never leaves the phone" data-ru="Распознавание на устройстве — речь не покидает телефон">Recognition happens on the device — speech never leaves the phone</li>
+          <li data-en="Keeps listening with the screen locked" data-ru="Продолжает слушать с заблокированным экраном">Keeps listening with the screen locked</li>
+          <li data-en="Every phrase is written down as it is recognised, so a long session is never lost" data-ru="Каждая фраза записывается сразу, поэтому долгая запись не пропадёт">Every phrase is written down as it is recognised, so a long session is never lost</li>
+          <li data-en="Share a transcript as plain text or as a .txt file" data-ru="Расшифровка отправляется текстом или файлом .txt">Share a transcript as plain text or as a .txt file</li>
+          <li data-en="Recovers by itself after a phone call or a change of headphones" data-ru="Сам продолжает после звонка или смены наушников">Recovers by itself after a phone call or a change of headphones</li>
+        </ul>
+        <div class="app-meta">
+          <span data-en="iPhone · six languages" data-ru="iPhone · шесть языков">iPhone · six languages</span>
+          <span data-en="Apple Watch comes next" data-ru="Apple Watch — следующая">Apple Watch comes next</span>
+        </div>
+      </div>
+      <div class="app-art" data-tilt>
+        <div class="phone">
+          <div class="phone-screen qf-screen">
+            <div class="qf-head"><span class="qf-dot"></span><b data-en="Listening" data-ru="Слушаю">Listening</b><small>12:04</small></div>
+            <div class="qf-line"><i>—</i><span data-en="So the deadline moves to Friday." data-ru="Значит, срок переносится на пятницу.">So the deadline moves to Friday.</span></div>
+            <div class="qf-line"><i>—</i><span data-en="Friday morning, before the call." data-ru="В пятницу утром, до созвона.">Friday morning, before the call.</span></div>
+            <div class="qf-line now"><i>—</i><span data-en="I will send the figures tonight…" data-ru="Цифры пришлю сегодня вечером…">I will send the figures tonight…</span></div>
+            <div class="qf-wave"><s></s><s></s><s></s><s></s><s></s><s></s><s></s></div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="foot-top">
+    <div class="foot-brand">
+      <img src="assets/logo-200.jpg" alt="NG Hive" width="240" height="240" decoding="async">
+      <p data-en="Mobile apps, assembled cell by cell." data-ru="Мобильные приложения, собранные по сотам.">Mobile apps, assembled cell by cell.</p>
+    </div>
+    <nav class="foot-nav">
+      <a href="/apps" data-en="Apps" data-ru="Приложения">Apps</a>
+      <a href="/#about" data-en="Studio" data-ru="Студия">Studio</a>
+      <a href="/#roadmap" data-en="Roadmap" data-ru="Планы">Roadmap</a>
+      <a href="/#contact" data-en="Contact" data-ru="Связаться">Contact</a>
+    </nav>
+  </div>
+  <div class="foot-bot">
+    <span>© <span id="year">2026</span> NG Hive</span>
+    <span data-en="Made in a small hive, on a large amount of coffee." data-ru="Сделано в маленьком улье и на большом количестве кофе.">Made in a small hive, on a large amount of coffee.</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Back to top">↑</button>
+<div class="bee" id="bee" aria-hidden="true">🐝</div>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

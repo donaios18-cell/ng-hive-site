@@ -82,7 +82,7 @@
                    : (DICT[next] && DICT[next][en]) || en;
     });
     root.setAttribute('lang', next);
-    document.title = ui('title');
+    document.title = ui(document.body.getAttribute('data-title-key') || 'title');
     langBtn.textContent = next.toUpperCase();
     langBtn.title = ui('lang');
     $('#brandLogo').title = ui('logo.tip');
@@ -259,7 +259,7 @@
 
   /* ─────────── копирование почты ─────────── */
   var mailBtn = $('#mailCopy');
-  mailBtn.addEventListener('click', function () {
+  if (mailBtn) mailBtn.addEventListener('click', function () {
     var mail = mailBtn.getAttribute('data-mail');
     var done = function () { toast(ui('toast.copied')); };
     if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -270,7 +270,8 @@
   });
 
   /* ─────────── форма → почтовый клиент ─────────── */
-  $('#contactForm').addEventListener('submit', function (e) {
+  var contactForm = $('#contactForm');
+  if (contactForm) contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
     var f = e.target;
     var els = f.elements;
@@ -291,6 +292,7 @@
 
   /* ─────────── фон героя: живые соты ─────────── */
   var canvas = $('#hexCanvas');
+  if (!canvas) return;          // соты живут только на главной
   var ctx = canvas.getContext('2d');
   var hexes = [];
   var mouse = { x: -9999, y: -9999 };
