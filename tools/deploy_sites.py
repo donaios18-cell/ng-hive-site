@@ -3,7 +3,7 @@
 Выкладка сайтов NG Hive в Cloudflare Pages.
 
     python tools/deploy_sites.py watch            один сайт
-    python tools/deploy_sites.py all              все четыре
+    python tools/deploy_sites.py all              все сайты
     python tools/deploy_sites.py watch --dry-run  показать, что уедет, ничего не выкладывая
 
 Всегда выкладывается свежий коммит из GitHub (origin), а не чья-то рабочая
@@ -41,6 +41,8 @@ SITES = {
                  (".gitignore", ".nojekyll")),
     "spectriq": ("spectriq-site", "main", "spectriq", "https://spectriq.nghive.app/",
                  (".gitignore", ".nojekyll")),
+    "quillfox": ("quillfox-site", "main", "quillfox", "https://quillfox.nghive.app/",
+                 (".gitignore", ".nojekyll", "tools/")),
 }
 
 
