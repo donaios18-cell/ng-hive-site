@@ -532,14 +532,52 @@ html[data-theme="dark"] .foot-brand img{mix-blend-mode:normal;background:#fff}
   .app-rev .app-art{order:0}
   .app-art{margin-top:8px}
 }
-@media (max-width:760px){
+@media (max-width:940px){
   .site-nav{position:fixed;inset:64px 0 auto;flex-direction:column;gap:0;padding:10px 24px 24px;
     background:var(--bg-2);border-bottom:1px solid var(--line);box-shadow:var(--shadow);
     transform:translateY(-130%);transition:transform .35s cubic-bezier(.2,.7,.3,1)}
   .site-nav.open{transform:none}
   .site-nav a{padding:14px 0;border-bottom:1px solid var(--line);font-size:1rem}
   .burger{display:flex}
+  .header-tools{margin-left:auto}
+}
+@media (max-width:760px){
   .btn-mini{display:none}
   .brand-word{font-size:1rem}
   .foot-top{flex-direction:column;align-items:flex-start}
+}
+
+/* ─────────── «Хотите поиграть?» и страница игр ─────────── */
+.btn-play{display:inline-flex;align-items:center;gap:7px;height:38px;padding:0 15px;border-radius:12px;
+  border:1px solid var(--honey);background:var(--honey-soft);color:var(--ink);font-weight:700;font-size:.88rem;
+  white-space:nowrap;transition:.25s}
+.btn-play:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(242,177,52,.34)}
+.site-nav a.nav-play{display:none}
+.game-note{font-size:.84rem;color:var(--steel);margin-top:14px}
+.cn-board{display:flex;flex-direction:column;align-items:center;gap:14px;width:min(100%,320px);padding:28px 24px 32px;
+  border-radius:30px;background:#0f3d2e;box-shadow:var(--shadow-lg);color:#f4f1e6}
+.cn-board b{font-size:1.5rem;font-weight:800;margin-bottom:4px}
+.cn-row{display:flex;gap:6px}
+.cn-row i{display:grid;place-items:center;width:48px;height:62px;border-radius:9px;font-style:normal;font-weight:800;
+  font-size:1.35rem;background:linear-gradient(#fffaf0,#efe6d2);box-shadow:0 3px 0 #bfb393}
+.cn-row .r{color:#d3362f}.cn-row .b{color:#2257c9}.cn-row .a{color:#d88a0a}.cn-row .k{color:#23252a}.cn-row .j{color:#6a35c9}
+.co-board{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:10px;width:min(100%,280px);
+  aspect-ratio:1;padding:18px;border-radius:30px;background:var(--bg-2);border:1px solid var(--line);box-shadow:var(--shadow)}
+.co-board i{border-radius:8px;background:var(--honey-soft)}
+.co-board s{position:absolute;border-radius:6px;background:var(--honey-deep)}
+.co-board .w1{left:37%;top:7%;width:7px;height:38%}
+.co-board .w2{left:22%;top:59%;width:38%;height:7px}
+.co-board .w3{left:76%;top:42%;width:7px;height:38%}
+@media (max-width:1100px) and (min-width:761px){
+  .header-tools .btn-mini{display:none}
+}
+@media (max-width:760px){
+  .btn-play{padding:0 11px}
+  .btn-play .play-text{display:none}
+  .site-nav a.nav-play{display:block}
+}
+@media (max-width:374px){
+  .site-header{gap:8px}
+  .header-tools{gap:6px}
+  .btn-play{padding:0 9px}
 }

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Want to play? Our games — NG Hive</title>
+<meta name="description" content="Games by NG Hive that open in the browser: CoNuTi, number tiles with friends or bots. More on the way.">
+<meta name="theme-color" content="#f2b134">
+<meta property="og:title" content="Want to play? Our games — NG Hive">
+<meta property="og:description" content="Games by NG Hive that open in the browser: CoNuTi, number tiles with friends or bots. More on the way.">
+<meta property="og:image" content="https://nghive.app/assets/header.jpg">
+<meta property="og:image:width" content="1568">
+<meta property="og:image:height" content="672">
+<meta property="og:url" content="https://nghive.app/games">
+<meta property="og:site_name" content="NG Hive">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,4 93,27 93,73 50,96 7,73 7,27' fill='%23f2b134'/%3E%3Ctext x='50' y='66' font-family='Arial,sans-serif' font-size='38' font-weight='bold' text-anchor='middle' fill='%23333'%3ENG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+
+<link rel="canonical" href="https://nghive.app/games">
+</head>
+<body data-title-key="title.games">
+
+<div class="scroll-progress"><span id="progressBar"></span></div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="/" id="brandLogo" title="Tap the honeycomb — a bee flies out :)">
+    <span class="brand-mark">
+      <svg viewBox="0 0 120 112" aria-hidden="true">
+        <g class="hx-outer" fill="none" stroke="currentColor" stroke-width="5">
+          <polygon points="42,6 64,19 64,45 42,58 20,45 20,19"/>
+          <polygon points="78,6 100,19 100,45 78,58 56,45 56,19" transform="translate(0,0)"/>
+          <polygon points="24,54 46,67 46,93 24,106 2,93 2,67"/>
+          <polygon points="96,54 118,67 118,93 96,106 74,93 74,67"/>
+        </g>
+        <polygon class="hx-core" points="60,30 82,43 82,69 60,82 38,69 38,43"/>
+        <text class="hx-text" x="60" y="64" text-anchor="middle">NG</text>
+      </svg>
+    </span>
+    <span class="brand-word">NG<span>HIVE</span></span>
+  </a>
+
+  <nav class="site-nav" id="siteNav">
+    <a href="/apps" data-en="Apps" data-ru="Приложения">Apps</a>
+    <a href="/#about" data-en="Studio" data-ru="Студия">Studio</a>
+    <a href="/#process" data-en="Process" data-ru="Процесс">Process</a>
+    <a href="/#roadmap" data-en="Roadmap" data-ru="Планы">Roadmap</a>
+    <a href="/#faq" data-en="FAQ" data-ru="Вопросы">FAQ</a>
+    <a class="nav-play is-here" href="/games" data-en="Want to play?" data-ru="Хотите поиграть?">Want to play?</a>
+  </nav>
+
+  <div class="header-tools">
+    <a class="btn-play" href="/games" aria-label="Want to play?"><span aria-hidden="true">🎲</span><span class="play-text" data-en="Want to play?" data-ru="Хотите поиграть?">Want to play?</span></a>
+    <div class="lang-menu" id="langMenu">
+      <button class="icon-btn lang-btn" id="langToggle" type="button" aria-haspopup="true" aria-expanded="false" title="Language">EN</button>
+      <ul class="lang-list" id="langList" role="menu"></ul>
+    </div>
+    <button class="icon-btn" id="themeToggle" type="button" title="Theme" aria-label="Theme">
+      <svg viewBox="0 0 24 24" class="ic-sun"><circle cx="12" cy="12" r="5"/><g stroke-linecap="round"><path d="M12 1.5v3M12 19.5v3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M1.5 12h3M19.5 12h3M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></g></svg>
+      <svg viewBox="0 0 24 24" class="ic-moon"><path d="M21 13a8.5 8.5 0 1 1-10-10 7 7 0 0 0 10 10z"/></svg>
+    </button>
+    <a class="btn btn-mini" href="/#contact" data-en="Contact" data-ru="Связаться">Contact</a>
+    <button class="burger" id="burger" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ══════════ ИГРЫ ══════════ -->
+  <section class="section apps" id="games">
+    <div class="sec-head reveal">
+      <p class="eyebrow" data-en="Games" data-ru="Игры">Games</p>
+      <h2 data-en="Want to play?" data-ru="Хотите поиграть?">Want to play?</h2>
+      <p class="lead" data-en="Our games open right in the browser, on a phone or a computer. No ads and nothing to install." data-ru="Наши игры открываются прямо в браузере — на телефоне и на компьютере. Без рекламы, ничего устанавливать не нужно.">Our games open right in the browser, on a phone or a computer. No ads and nothing to install.</p>
+    </div>
+
+    <article class="app reveal" id="conuti">
+      <div class="app-text">
+        <span class="pill pill-live" data-en="Play now" data-ru="Можно играть">Play now</span>
+        <h3>CoNuTi</h3>
+        <p class="app-tag" data-en="Number tiles in four colours — with friends or with bots" data-ru="Фишки с числами в четырёх цветах — с друзьями или с ботами">Number tiles in four colours — with friends or with bots</p>
+        <p data-en="Lay runs and groups on a shared table, rearrange what is already there and be the first to get rid of all your tiles. Points add up round after round." data-ru="Выкладывайте ряды и группы на общий стол, перестраивайте то, что уже лежит, и первыми избавьтесь от всех своих фишек. Очки копятся раунд за раундом.">Lay runs and groups on a shared table, rearrange what is already there and be the first to get rid of all your tiles. Points add up round after round.</p>
+        <ul class="app-list">
+          <li data-en="Play against bots at three levels" data-ru="Игра с ботами трёх уровней">Play against bots at three levels</li>
+          <li data-en="A room for friends: share the code and up to four play together" data-ru="Комната для друзей: отправьте код — и играйте вчетвером">A room for friends: share the code and up to four play together</li>
+          <li data-en="Your statistics, which follow you to another device with a profile code" data-ru="Своя статистика, которая переносится на другое устройство по коду профиля">Your statistics, which follow you to another device with a profile code</li>
+        </ul>
+        <div class="app-links">
+          <a class="btn btn-small" href="https://rummy.nghive.app/" target="_blank" rel="noopener" data-en="Play CoNuTi →" data-ru="Играть в CoNuTi →">Play CoNuTi →</a>
+        </div>
+        <div class="app-meta">
+          <span data-en="phone and computer" data-ru="телефон и компьютер">phone and computer</span>
+          <span data-en="free, no ads" data-ru="бесплатно, без рекламы">free, no ads</span>
+        </div>
+        <p class="game-note" data-en="The game is in Russian for now. Your player name and statistics are kept on our game server." data-ru="Игра пока на русском. Имя игрока и статистика хранятся на нашем игровом сервере.">The game is in Russian for now. Your player name and statistics are kept on our game server.</p>
+      </div>
+      <div class="app-art" data-tilt>
+        <a class="cn-board" href="https://rummy.nghive.app/" target="_blank" rel="noopener" aria-label="CoNuTi">
+          <b>CoNuTi</b>
+          <span class="cn-row"><i class="r">4</i><i class="r">5</i><i class="r">6</i></span>
+          <span class="cn-row"><i class="b">9</i><i class="a">9</i><i class="k">9</i></span>
+          <span class="cn-row"><i class="b">11</i><i class="j">☺</i><i class="b">13</i></span>
+        </a>
+      </div>
+    </article>
+
+    <article class="app app-rev reveal" id="corridors">
+      <div class="app-text">
+        <span class="pill pill-wip" data-en="Coming soon" data-ru="Скоро">Coming soon</span>
+        <h3 data-en="Corridors" data-ru="Коридоры">Corridors</h3>
+        <p class="app-tag" data-en="The next game in the hive" data-ru="Следующая игра в улье">The next game in the hive</p>
+        <p data-en="We are working on it. The details will appear here." data-ru="Мы над ней работаем. Подробности появятся здесь.">We are working on it. The details will appear here.</p>
+      </div>
+      <div class="app-art" data-tilt>
+        <div class="co-board" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><s class="w1"></s><s class="w2"></s><s class="w3"></s></div>
+      </div>
+    </article>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="foot-top">
+    <div class="foot-brand">
+      <img src="assets/logo-200.jpg" alt="NG Hive" width="240" height="240" decoding="async">
+      <p data-en="Mobile apps, assembled cell by cell." data-ru="Мобильные приложения, собранные по сотам.">Mobile apps, assembled cell by cell.</p>
+    </div>
+    <nav class="foot-nav">
+      <a href="/games" data-en="Games" data-ru="Игры">Games</a>
+      <a href="/apps" data-en="Apps" data-ru="Приложения">Apps</a>
+      <a href="/#about" data-en="Studio" data-ru="Студия">Studio</a>
+      <a href="/#roadmap" data-en="Roadmap" data-ru="Планы">Roadmap</a>
+      <a href="/#contact" data-en="Contact" data-ru="Связаться">Contact</a>
+    </nav>
+  </div>
+  <div class="foot-bot">
+    <span>© <span id="year">2026</span> NG Hive</span>
+    <span data-en="Made in a small hive, on a large amount of coffee." data-ru="Сделано в маленьком улье и на большом количестве кофе.">Made in a small hive, on a large amount of coffee.</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Back to top">↑</button>
+<div class="bee" id="bee" aria-hidden="true">🐝</div>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
