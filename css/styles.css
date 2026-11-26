@@ -528,7 +528,8 @@ html[data-theme="dark"] .foot-brand img{mix-blend-mode:normal;background:#fff}
   .hero-art img{width:min(74%,300px)}
   .stats{grid-template-columns:repeat(2,1fr)}
   .stat:last-child{grid-column:1/-1}
-  .app,.app-rev,.contact-card{grid-template-columns:1fr}
+  .app,.app-rev,.contact-card{grid-template-columns:minmax(0,1fr)}
+  .mail-copy{max-width:100%;flex-wrap:wrap;row-gap:4px}
   .app-rev .app-art{order:0}
   .app-art{margin-top:8px}
 }
@@ -565,6 +566,20 @@ html[data-theme="dark"] .foot-brand img{mix-blend-mode:normal;background:#fff}
   border-radius:30px;background:#1b2238;box-shadow:var(--shadow-lg);color:#ece9e4}
 .ww-board b{font-size:1.5rem;font-weight:800}
 .ww-board svg{display:block;width:100%;height:auto}
+.game-note a{text-decoration:underline;text-underline-offset:3px}
+.game-note a:hover{color:var(--honey-deep)}
+/* политика конфиденциальности игр: все языки на странице, виден выбранный */
+.legal{position:relative;z-index:2;max-width:780px;margin:0 auto;padding:clamp(96px,12vw,130px) clamp(16px,4vw,32px) 80px;overflow-wrap:break-word}
+.legal [data-l]{display:none}
+html[lang="en"] .legal [data-l="en"],html[lang="ru"] .legal [data-l="ru"],html[lang="de"] .legal [data-l="de"],
+html[lang="fr"] .legal [data-l="fr"],html[lang="es"] .legal [data-l="es"],html[lang="pt"] .legal [data-l="pt"]{display:block}
+.legal h1{font-size:clamp(1.7rem,5vw,2.7rem);margin-bottom:12px;hyphens:auto}
+.legal h2{font-size:1.3rem;margin:38px 0 12px}
+.legal p{margin-bottom:14px}
+.legal ul{margin:0 0 16px;padding-left:22px}
+.legal li{margin-bottom:8px;line-height:1.65;color:var(--ink-2)}
+.legal a{color:var(--ink);font-weight:700;text-decoration:underline;text-decoration-color:var(--honey);text-underline-offset:3px}
+.legal .legal-date{font-size:.88rem}
 @media (max-width:1100px) and (min-width:761px){
   .header-tools .btn-mini{display:none}
 }
