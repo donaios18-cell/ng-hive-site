@@ -82,6 +82,8 @@
                    : (DICT[next] && DICT[next][en]) || en;
     });
     root.setAttribute('lang', next);
+    // игры открываются на языке сайта
+    $$('a[data-game]').forEach(function (a) { a.href = a.getAttribute('data-game') + '?lang=' + next; });
     document.title = ui(document.body.getAttribute('data-title-key') || 'title');
     langBtn.textContent = next.toUpperCase();
     langBtn.title = ui('lang');
